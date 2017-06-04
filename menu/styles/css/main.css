@@ -1,0 +1,33 @@
+.container{
+	display: flex;
+	padding-top: 100px;
+	flex-wrap: wrap;
+}
+
+.menu{
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	width: 500px;
+}
+.menu__item{
+	flex: 1 1 0;
+	background-color: #eee;
+	text-align: center;
+	padding: 20px;
+	cursor: pointer;
+	color: #7B8585;
+}
+.menu__item:hover{
+	background-color: #beecea !important;
+}
+.menu__item_active:hover{
+	background-color: #41c7c2 !important;
+}
+.status{
+	display: flex;
+}
+.status p{
+	margin: 0 auto;
+	padding-top: 20px;
+}
