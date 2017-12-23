@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Input from 'components/Input/Input';
 
 class App extends React.Component {
 	constructor(props) {
@@ -82,6 +83,9 @@ class App extends React.Component {
 			<div className = "status">
 				<p>Selected "{this.state.status}"</p>
 			</div>
+
+			<Input />
+
 		</div>
 	}
 }

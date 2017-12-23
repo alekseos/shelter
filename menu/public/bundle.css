@@ -9,7 +9,7 @@
   justify-content: space-around;
   width: 500px;
 }
-.menu-item {
+.menu__item {
   flex: 1 1 0;
   background-color: #eee;
   text-align: center;
@@ -17,10 +17,10 @@
   cursor: pointer;
   color: #7B8585;
 }
-.menu-item:hover {
+.menu__item:hover {
   background-color: #beecea !important;
 }
-.menu-item--active:hover {
+.menu__item_active:hover {
   background-color: #41c7c2 !important;
 }
 .status {
