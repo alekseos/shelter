@@ -26,5 +26,8 @@
     "react-dom": "^15.5.3",
     "vinyl-source-stream": "^1.1.0"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "styled-components": "^2.4.0"
+  }
 }
