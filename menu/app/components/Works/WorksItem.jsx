@@ -4,12 +4,16 @@ import styled from 'styled-components';
 
 const Item = styled.div`
   cursor: pointer;
-  flex: 0 1 24%;
+  position: relative;
   padding: 10px;
-  margin: 0 10px 30px 10px;
+  margin: 0 10px 20px 10px;
   background-color: blue;
   height: 200px;
-  width: 200px;
+  overflow: hidden;
+`
+
+const Image = styled.img`
+  height: 100%;
 `
 
 const WorksItem= ({
@@ -17,7 +21,7 @@ const WorksItem= ({
   image,
 }) => {
   return <Item>
-    <img src={image} />
+    <Image src={image} />
   </Item>
 }
 

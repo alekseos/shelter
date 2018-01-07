@@ -6,6 +6,7 @@ import MenuItem from '../Menu/MenuItem';
 
 const Wrapper = styled.section`
   display: flex;
+  padding: 20px 0;
 `
 const MenuContainer = styled.div`
   display: flex;

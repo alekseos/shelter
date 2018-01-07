@@ -5,15 +5,15 @@ import styled from 'styled-components';
 import WorksItem from '../Works/WorksItem';
 
 const Wrapper = styled.section`
+  background-color: grey;
   display: flex;
+  padding: 20px 0;
 `
 
 const WorksContainer = styled.div`
   display: flex;
-  margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: space-between;
-  background-color: grey;
+  justify-content: space-around;
 `
 
 class Works extends React.Component {
@@ -21,10 +21,22 @@ class Works extends React.Component {
     super(props);
   }
 
-  mappingItems = () => {
-    let { titles, images }  = this.props;
+  // static defaultProps = {
+  //   images: [
+  //     '../../app/images/default.jpg',
+  //     '../../app/images/default.jpg',
+  //     '../../app/images/default.jpg',
+  //     '../../app/images/default.jpg',
+  //     '../../app/images/default.jpg',
+  //     '../../app/images/default.jpg',
+  //
+  //   ]
+  // }
 
-    const titleItems = images.map( (image, key) => <div> <WorksItem image={image} key={key} /></div>);
+  mappingItems = () => {
+    let { posts }  = this.props;
+
+    const titleItems = posts.map( (post, key) => <div> <WorksItem image={post.image} key={key} />{post.title}</div>);
 
     return <WorksContainer>{titleItems}</WorksContainer>;
   }

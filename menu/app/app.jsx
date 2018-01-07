@@ -7,6 +7,9 @@ import Input from '../app/components/Input/Input';
 import Menu from '../app/components/Menu/MenuContainer';
 import Works from '../app/components/Works/WorksContainer';
 
+import * as WorksPack from '../app/data/WorksPack/WorksPack.json';
+import * as WorksPackDemo from '../app/data/WorksPack/WorksPack-demo.json';
+
 const Wrapper = styled.div`
 	margin: 20px;
 `
@@ -33,20 +36,7 @@ class App extends React.Component {
 				]}
 			/>
 			<Works
-				titles={[
-					'The first project',
-					'TMy favorite work',
-					'The first project',
-					'The second',
-					'The 5',
-				]}
-				images={[
-					'../../app/images/1.png',
-					'../../app/images/2.png',
-					'../../app/images/3.png',
-					'../../app/images/4.png',
-					'../../app/images/5.png',
-				]}
+				posts={ WorksPackDemo.data }
 			/>
 
 		</Wrapper>
