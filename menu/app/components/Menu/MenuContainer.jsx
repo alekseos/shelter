@@ -2,7 +2,7 @@ import React from 'react';
 
 import styled from 'styled-components';
 
-import MenuItem from '../Menu/MenuItem'
+import MenuItem from '../Menu/MenuItem';
 
 const Wrapper = styled.section`
   display: flex;
@@ -29,7 +29,7 @@ class Menu extends React.Component {
   mappingItems = () => {
     let titles = this.props.titles;
 
-    const titleItems = titles.map(title => <div> <MenuItem title={title} /></div>);
+    const titleItems = titles.map( (title, key) => <div> <MenuItem title={title} key={key} /></div>);
 
     return <MenuContainer>{titleItems}</MenuContainer>;
   }

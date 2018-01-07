@@ -9,6 +9,7 @@ const Item = styled.div`
   cursor: pointer;
   flex: 1 0;
   padding: 10px;
+  margin: 0 10px;
 `
 
 const MenuItem = ({
