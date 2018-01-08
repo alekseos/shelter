@@ -21,22 +21,10 @@ class Works extends React.Component {
     super(props);
   }
 
-  // static defaultProps = {
-  //   images: [
-  //     '../../app/images/default.jpg',
-  //     '../../app/images/default.jpg',
-  //     '../../app/images/default.jpg',
-  //     '../../app/images/default.jpg',
-  //     '../../app/images/default.jpg',
-  //     '../../app/images/default.jpg',
-  //
-  //   ]
-  // }
-
   mappingItems = () => {
     let { posts }  = this.props;
 
-    const titleItems = posts.map( (post, key) => <div> <WorksItem image={post.image} key={key} />{post.title}</div>);
+    const titleItems = posts.map( (post, key) => <div> <WorksItem image={post.image} title={post.title} key={key} /></div>);
 
     return <WorksContainer>{titleItems}</WorksContainer>;
   }
