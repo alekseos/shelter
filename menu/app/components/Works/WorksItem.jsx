@@ -22,16 +22,16 @@ const Item = styled.div`
 `
 
 const Mask = styled.div`
+   box-sizing:border-box;
+   height: 100%;
+   left: 0;
    opacity: 0;
    overflow:visible;
-   box-sizing:border-box;
-   transition: all 0.6s ease-in-out;
    position: absolute;
-   width: 100%;
-   height: 100%;
    position: absolute;
    top: 0;
-   left: 0;
+   transition: all 0.6s ease-in-out;
+   width: 100%;
 `
 
 const Image = styled.img`
