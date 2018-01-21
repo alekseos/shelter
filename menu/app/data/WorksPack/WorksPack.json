@@ -1,64 +1,109 @@
-{
-
-"data":
-
 [ {
   "id": "1",
+  "type": {
+    "1": "landing",
+    "2": "store"
+  },
   "title": "I'm a 1 work",
   "image": "../../app/images/portfolio/1.jpg",
 }, {
   "id": "2",
+  "type": {
+    "1": "app",
+  },
   "title": "I'm a 2 work",
   "image": "../../app/images/portfolio/2.jpg",
 }, {
   "id": "3",
+  "type": {
+    "1": "design",
+  },
   "title": "I'm a 3 work",
   "image": "../../app/images/portfolio/3.jpg",
 }, {
   "id": "4",
+  "type": {
+    "1": "design",
+  },
   "title": "I'm a 4 work",
   "image": "../../app/images/portfolio/4.jpg",
 }, {
   "id": "5",
+  "type": {
+    "1": "design",
+    "2": "landing"
+  },
   "title": "I'm a 5 work",
   "image": "../../app/images/portfolio/5.jpg",
 }, {
   "id": "6",
+  "type": {
+    "1": "app",
+  },
   "title": "I'm a 6 work. I started that work in a good time",
   "image": "../../app/images/portfolio/6.gif",
 }, {
   "id": "7",
+  "type": {
+    "1": "store",
+  },
   "title": "I'm a 7 work",
   "image": "../../app/images/portfolio/7.jpg",
 }, {
   "id": "8",
+  "type": {
+    "1": "store",
+    "2": "design",
+    "3": "app"
+  },
   "title": "I'm a 8 work",
   "image": "../../app/images/portfolio/8.jpg",
 }, {
   "id": "9",
+  "type": {
+    "1": "store",
+    "2": "design",
+    "3": "app"
+  },
   "title": "I'm a 9 work",
   "image": "../../app/images/portfolio/9.jpg",
 }, {
   "id": "10",
+  "type": {
+    "1": "store"
+  },
   "title": "I'm a 10 work. It was a good trip. I'm remeber all of that. Thank's my team!!!",
   "image": "../../app/images/portfolio/10.jpg",
 }, {
   "id": "11",
+  "type": {
+    "1": "design"
+  },
   "title": "I'm a 11 work",
   "image": "../../app/images/portfolio/11.jpg",
 }, {
   "id": "12",
+  "type": {
+    "1": "store",
+    "2": "design",
+  },
   "title": "I'm a 12 work",
   "image": "../../app/images/portfolio/12.jpg",
 }, {
   "id": "13",
+  "type": {
+      "1": "design",
+      "2": "store",
+      "3": "app"
+  },
   "title": "I'm a 13 work",
   "image": "../../app/images/portfolio/13.jpg",
 }, {
   "id": "14",
+  "type": {
+      "1": "app",
+      "2": "design",
+  },
   "title": "I'm a 14 work",
   "image": "../../app/images/portfolio/14.jpg",
 } ]
-
-
-}

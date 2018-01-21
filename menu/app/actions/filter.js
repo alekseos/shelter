@@ -1,16 +1,9 @@
-import { ALL_PROJECTS, PORTFOLIO, LANDING_PAGE, ONLINE_STORES, APPS, DESIGN } from '../constants/filter';
+import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORES, APPS, DESIGN } from '../constants/filter';
 
 export function filterAllProjects() {
   return {
     type: ALL_PROJECTS,
     filter: "allProjects"
-  }
-}
-
-export function filterPortfolio() {
-  return {
-    type: PORTFOLIO,
-    filter: "portfolio"
   }
 }
 
@@ -21,17 +14,17 @@ export function filterLandingPage() {
   }
 }
 
-export function filterOnlineStores() {
+export function filterOnlineStore() {
   return {
-    type: ONLINE_STORES,
-    filter: "onlineStores"
+    type: ONLINE_STORE,
+    filter: "onlineStore"
   }
 }
 
-export function filterApps() {
+export function filterApp() {
   return {
-    type: APPS,
-    filter: "apps"
+    type: APP,
+    filter: "app"
   }
 }
 

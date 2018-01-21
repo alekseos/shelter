@@ -13,9 +13,11 @@ const Item = styled.div`
 `
 
 const MenuItem = ({
-  title
+  title,
+  key,
+  onClick
 }) => {
-  return <Item>{title}</Item>
+  return <Item key={key} onClick={onClick}>{title}</Item>
 }
 
 export default MenuItem;

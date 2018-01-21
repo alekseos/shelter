@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import styled from 'styled-components';
 
@@ -16,7 +17,7 @@ const WorksContainer = styled.div`
   justify-content: space-around;
 `
 
-class Works extends React.Component {
+class WorksBlock extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -35,5 +36,14 @@ class Works extends React.Component {
     </Wrapper>
   }
 }
+
+const mapStateToProps = function(state = {}) {
+  return {
+    posts: state.works,
+  }
+}
+
+const Works = connect(mapStateToProps)(WorksBlock);
+
 
 export default Works;
