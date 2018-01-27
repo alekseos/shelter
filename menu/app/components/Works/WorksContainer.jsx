@@ -39,7 +39,7 @@ class WorksBlock extends React.Component {
 
 const mapStateToProps = function(state = {}) {
   return {
-    posts: state.works,
+    posts: state.works.data,
   }
 }
 

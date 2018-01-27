@@ -15,7 +15,7 @@ const Item = styled.div`
 const MenuItem = ({
   title,
   key,
-  onClick
+  onClick,
 }) => {
   return <Item key={key} onClick={onClick}>{title}</Item>
 }

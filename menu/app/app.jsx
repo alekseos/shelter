@@ -18,23 +18,18 @@ const Wrapper = styled.div`
 	margin: 20px;
 `
 
-const appReducers = combineReducers({
-  filter, works
-})
-
 class App extends React.Component {
 	constructor () {
 		super ();
 
 		this.store = Redux.createStore(
-	    appReducers,
+	    filter,
 	    {
 				filter: 'allProject',
 				works: WorksPackDemo
 	    }
 	  );
 
-		console.log(this.store);
 	}
 
 	render() {
@@ -57,7 +52,6 @@ class App extends React.Component {
 		</Provider>
 	}
 }
-
 
 
 export default App;
