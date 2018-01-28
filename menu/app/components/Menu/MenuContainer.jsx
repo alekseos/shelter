@@ -35,18 +35,16 @@ class MenuBlock extends React.Component {
     ]
   }
 
-  // handleClick = (title) => {
-  //   this.props.dispatchFilterType(title);
-  //
-  //   console.log('I`m console.log!');
-  // }
+  handleClick = () => {
+    this.props.dispatchFilterType();
+
+    console.log('this state:', this.state, 'this state:', this.props);
+  }
 
   mappingItems = () => {
-    console.log(this.state, this.props);
-
     let { titles } = this.props;
 
-    const titleItems = titles.map( (title, key) => <div> <MenuItem title={title} key={key} /></div>);
+    const titleItems = titles.map( (title, key) => <MenuItem title={title} key={key} />);
 
     return <MenuContainer>{titleItems}</MenuContainer>;
   }
@@ -54,51 +52,22 @@ class MenuBlock extends React.Component {
   render() {
     return <Wrapper>
         {this.mappingItems()}
+        <div onClick={this.handleClick}>Click me!</div>
     </Wrapper>
   }
 }
 
 const mapStateToProps = (state = {}) => {
   return {
-    filter: state.filter,
     works: state.works,
+    filter: state.filter.filterType,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatchFilterType: (filter) => {
-      if (filter === "landingPage") {
-        dispatch(filterAllProjects());
-      } else {
-        dispatch(filterLandingPage());
-      }
-      // switch (filter) {
-      //   case ("allProjects"):
-      //     return {
-      //       dispatch(filterAllProjects())
-      //     };
-      //   case ("landingPage"):
-      //     return {
-      //       dispatch(filterLandingPage())
-      //     };
-      //   case ("onlineStore"):
-      //     return {
-      //       dispatch(filterOnlineStore())
-      //     };
-      //   case ("app"):
-      //     return {
-      //       dispatch(filterApp())
-      //     };
-      //   case ("design"):
-      //     return {
-      //       dispatch(filterDesign())
-      //     };
-      //   default:
-      //     return {
-      //       dispatch(filterDesign())
-      //     };
-      // }
+    dispatchFilterType: () => {
+        dispatch(filterOnlineStore());
     }
   }
 }

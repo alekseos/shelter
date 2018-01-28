@@ -25,7 +25,7 @@ class WorksBlock extends React.Component {
   mappingItems = () => {
     let { posts }  = this.props;
 
-    const titleItems = posts.map( (post, key) => <div> <WorksItem image={post.image} title={post.title} key={key} /></div>);
+    const titleItems = posts.map( (post, key) => <WorksItem image={post.image} title={post.title} key={key} />);
 
     return <WorksContainer>{titleItems}</WorksContainer>;
   }

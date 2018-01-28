@@ -1,8 +1,7 @@
 import { WORKS } from '../constants/works';
 
-export function works(data) {
+export function works() {
   return {
     type: WORKS,
-    data
   }
 }
