@@ -1,21 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import styled from 'styled-components';
-
 import WorksItem from '../Works/WorksItem';
-
 const Wrapper = styled.section`
   background-color: grey;
   display: flex;
-  padding: 20px 0;
-`
-
+  padding: 20px 0;`
 const WorksContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-`
+  justify-content: space-around;`
 
 class WorksBlock extends React.Component {
   constructor(props) {
@@ -23,9 +17,23 @@ class WorksBlock extends React.Component {
   }
 
   mappingItems = () => {
-    let { posts }  = this.props;
+    let { posts, filter }  = this.props;
 
-    const titleItems = posts.map( (post, key) => <WorksItem image={post.image} title={post.title} key={key} />);
+    // const titleItems = posts.data.filter(post => post.tags.includes(filter)).map( (post, key) => {
+    //   <WorksItem
+    //     image={post.image}
+    //     title={post.title}
+    //     key={key}
+    //   />
+    // });
+
+    const titleItems = posts.map( (post, key) => {
+      <WorksItem
+        image={post.image}
+        title={post.title}
+        key={key}
+      />
+    });
 
     return <WorksContainer>{titleItems}</WorksContainer>;
   }
@@ -37,9 +45,10 @@ class WorksBlock extends React.Component {
   }
 }
 
-const mapStateToProps = function(state = {}) {
+const mapStateToProps = (state = {}) {
   return {
     posts: state.works.data,
+    filter: state.filter
   }
 }
 

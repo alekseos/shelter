@@ -1,4 +1,4 @@
-import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORE, APPS, DESIGN } from '../constants/filter';
+import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORE, APP, DESIGN } from '../constants/filter';
 
 export function filterAllProjects() {
   return {

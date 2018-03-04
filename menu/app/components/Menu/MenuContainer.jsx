@@ -1,29 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 import { filterAllProjects, filterLandingPage, filterOnlineStore, filterApp, filterDesign  } from '../../actions/filter';
-
 import styled from 'styled-components';
-
 import MenuItem from '../Menu/MenuItem';
-
 const Wrapper = styled.section`
   display: flex;
-  padding: 20px 0;
-`
-
+  padding: 20px 0;`
 const MenuContainer = styled.div`
   display: flex;
-  margin: 0 auto;
-`
+  margin: 0 auto;`
 
 class MenuBlock extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      type: "allProjects"
-    }
   }
 
   static defaultProps = {
@@ -35,16 +24,16 @@ class MenuBlock extends React.Component {
     ]
   }
 
-  handleClick = () => {
-    this.props.dispatchFilterType();
+  handleClick = (name) => {
+    this.props.dispatchFilterType(name);
 
-    console.log('this state:', this.state, 'this state:', this.props);
+    console.log('this state:', this.state, 'this props:', this.props);
   }
 
   mappingItems = () => {
     let { titles } = this.props;
 
-    const titleItems = titles.map( (title, key) => <MenuItem title={title} key={key} />);
+    const titleItems = titles.map( (title, key) => <MenuItem title={title} key={key} onClick={this.handleClick}/>);
 
     return <MenuContainer>{titleItems}</MenuContainer>;
   }
@@ -52,25 +41,35 @@ class MenuBlock extends React.Component {
   render() {
     return <Wrapper>
         {this.mappingItems()}
-        <div onClick={this.handleClick}>Click me!</div>
     </Wrapper>
   }
 }
 
-const mapStateToProps = (state = {}) => {
+const mapStateToProps = (state) => {
   return {
-    works: state.works,
-    filter: state.filter.filterType,
+    filter: state.filter,
   }
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatchFilterType: () => {
-        dispatch(filterOnlineStore());
+    dispatchFilterType: (title) => {
+      switch (title) {
+        case 'Landing pages':
+          return dispatch(filterLandingPage());
+        case 'Online stores':
+          return dispatch(filterOnlineStore());
+        case 'Design':
+          return dispatch(filterApp());
+        case 'Apps':
+          return dispatch(filterDesign());
+        default:
+          return dispatch(filterAllProjects());
+      }
     }
   }
 }
+
 const Menu = connect(mapStateToProps, mapDispatchToProps)(MenuBlock);
 
 export default Menu;

@@ -1,12 +1,8 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
 const Wrapper = styled.div`
   background-color: rgba(0,0,0, .1);
-  position: relative;
-`
-
+  position: relative;`
 const Item = styled.div`
   background-color: blue;
   cursor: pointer;
@@ -18,9 +14,7 @@ const Item = styled.div`
   &:hover .mask {
      opacity: 1;
      background-color:rgba(0,0,0, 0.4);
-  }
-`
-
+  }`
 const Mask = styled.div`
    box-sizing:border-box;
    height: 100%;
@@ -31,21 +25,16 @@ const Mask = styled.div`
    position: absolute;
    top: 0;
    transition: all 0.6s ease-in-out;
-   width: 100%;
-`
-
+   width: 100%;`
 const Image = styled.img`
-  height: 100%;
-`
-
+  height: 100%;`
 const Description = styled.div`
   color: white;
   left: 20%;
   position: absolute;
   text-align: center;
   top: 25%;
-  width: 60%;
-`
+  width: 60%;`
 
 const WorksItem= ({
   title,
