@@ -3,7 +3,7 @@ import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORE, APP, DESIGN } from '../consta
 export function filterAllProjects() {
   return {
     type: ALL_PROJECTS,
-    filter: "allProjects"
+    filter: "allProject"
   }
 }
 

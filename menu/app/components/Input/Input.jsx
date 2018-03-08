@@ -4,7 +4,6 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   padding: 20px 0;
-  background-color: grey;
 `;
 
 const ItemContainer= styled.input`

@@ -1,10 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 const Wrapper = styled.div`
-  background-color: rgba(0,0,0, .1);
   position: relative;`
 const Item = styled.div`
-  background-color: blue;
   cursor: pointer;
   height: 200px;
   margin: 0 10px 20px 10px;

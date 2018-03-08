@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 import WorksItem from '../Works/WorksItem';
 const Wrapper = styled.section`
-  background-color: grey;
   display: flex;
   padding: 20px 0;`
 const WorksContainer = styled.div`
@@ -17,20 +16,17 @@ class WorksBlock extends React.Component {
   }
 
   mappingItems = () => {
-    let { posts, filter }  = this.props;
+    let { works, filter }  = this.props;
 
-    // const titleItems = posts.data.filter(post => post.tags.includes(filter)).map( (post, key) => {
-    //   <WorksItem
-    //     image={post.image}
-    //     title={post.title}
-    //     key={key}
-    //   />
-    // });
+    console.log('filter_cloning:', filter, filter.filter);
 
-    const titleItems = posts.map( (post, key) => {
-      <WorksItem
-        image={post.image}
-        title={post.title}
+    const titleItems = works
+      .filter(post => post.tags.includes(filter.filter))
+        .map( (work, key) => {
+
+      return <WorksItem
+        image={work.image}
+        title={work.title}
         key={key}
       />
     });
@@ -45,12 +41,12 @@ class WorksBlock extends React.Component {
   }
 }
 
-const mapStateToProps = (state = {}) {
+const mapStateToProps = (state = {}) => {
   return {
-    posts: state.works.data,
-    filter: state.filter
+    works: state.works.data,
+    filter: state.filter,
   }
-}
+};
 
 const Works = connect(mapStateToProps)(WorksBlock);
 

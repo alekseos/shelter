@@ -24,10 +24,8 @@ class MenuBlock extends React.Component {
     ]
   }
 
-  handleClick = (name) => {
-    this.props.dispatchFilterType(name);
-
-    console.log('this state:', this.state, 'this props:', this.props);
+  handleClick = (title) => {
+    this.props.dispatchFilterType(title);
   }
 
   mappingItems = () => {
@@ -55,14 +53,16 @@ const mapDispatchToProps = (dispatch) => {
   return {
     dispatchFilterType: (title) => {
       switch (title) {
+        case 'All projects':
+          return dispatch(filterAllProjects());
         case 'Landing pages':
           return dispatch(filterLandingPage());
         case 'Online stores':
           return dispatch(filterOnlineStore());
         case 'Design':
-          return dispatch(filterApp());
-        case 'Apps':
           return dispatch(filterDesign());
+        case 'Apps':
+          return dispatch(filterApp());
         default:
           return dispatch(filterAllProjects());
       }

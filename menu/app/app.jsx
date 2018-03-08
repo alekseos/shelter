@@ -8,7 +8,7 @@ import { works } from './reducers/works';
 import Input from './components/Input/Input';
 import Menu from './components/Menu/MenuContainer';
 import Works from './components/Works/WorksContainer';
-import WorksPackDemo from './data/WorksPack/WorksPack-demo.json';
+import WorksPackDemo from './data/WorksPack/WorksPack.json';
 const Wrapper = styled.div`
 	margin: 20px;`
 
@@ -27,15 +27,11 @@ class App extends React.Component {
 				filter: 'allProject',
 	    }
 	  );
-
 	}
 
 	render() {
 		return <Provider store={this.store}>
 			<Wrapper>
-				<Input
-					placeholder={'Input'}
-				/>
 				<Menu
 					titles={[
 						'All projects',

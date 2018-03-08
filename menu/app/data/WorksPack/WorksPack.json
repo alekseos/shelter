@@ -8,6 +8,7 @@
   "image": "../../app/images/portfolio/1.jpg",
   "tags":
   [
+    "allProject",
     "design"
   ]
 }, {
@@ -16,6 +17,7 @@
   "image": "../../app/images/portfolio/2.jpg",
   "tags":
   [
+    "allProject",
     "design"
   ]
 }, {
@@ -24,8 +26,8 @@
   "image": "../../app/images/portfolio/3.jpg",
   "tags":
   [
-    "design",
-    "apps"
+    "allProject",
+    "design"
   ]
 }, {
   "id": "4",
@@ -33,9 +35,9 @@
   "image": "../../app/images/portfolio/4.jpg",
   "tags":
   [
+    "allProject",
     "onlineStore",
-    "landingPage",
-    "apps"
+    "design"
   ]
 }, {
   "id": "5",
@@ -43,8 +45,8 @@
   "image": "../../app/images/portfolio/5.jpg",
   "tags":
   [
-    "onlineStore",
-    "apps"
+    "allProject",
+    "design"
   ]
 }, {
   "id": "6",
@@ -52,9 +54,8 @@
   "image": "../../app/images/portfolio/6.gif",
   "tags":
   [
-    "onlineStore",
-    "landingPage",
-    "apps"
+    "allProject",
+    "design"
   ]
 }, {
   "id": "7",
@@ -62,6 +63,7 @@
   "image": "../../app/images/portfolio/7.jpg",
   "tags":
   [
+    "allProject",
     "design",
   ]
 }, {
@@ -70,8 +72,9 @@
   "image": "../../app/images/portfolio/8.jpg",
   "tags":
   [
+    "allProject",
     "landingPage",
-    "apps"
+    "design"
   ]
 }, {
   "id": "9",
@@ -79,8 +82,9 @@
   "image": "../../app/images/portfolio/9.jpg",
   "tags":
   [
+    "allProject",
     "onlineStore",
-    "apps"
+    "design"
   ]
 }, {
   "id": "10",
@@ -88,7 +92,9 @@
   "image": "../../app/images/portfolio/10.jpg",
   "tags":
   [
-    "apps"
+    "allProject",
+    "landingPage",
+    "design"
   ]
 }, {
   "id": "11",
@@ -96,7 +102,8 @@
   "image": "../../app/images/portfolio/11.jpg",
   "tags":
   [
-    "apps"
+    "allProject",
+    "design"
   ]
 }, {
   "id": "12",
@@ -104,8 +111,9 @@
   "image": "../../app/images/portfolio/12.jpg",
   "tags":
   [
+    "allProject",
+    "app",
     "onlineStore",
-    "landingPage",
     "design"
   ]
 }, {
@@ -114,7 +122,7 @@
   "image": "../../app/images/portfolio/13.jpg",
   "tags":
   [
-    "landingPage",
+    "allProject",
     "design"
   ]
 }, {
@@ -123,10 +131,8 @@
   "image": "../../app/images/portfolio/14.jpg",
   "tags":
   [
-    "onlineStore",
-    "landingPage",
+    "allProject",
     "design",
-    "apps"
   ]
 } ]
 

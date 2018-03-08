@@ -7,14 +7,15 @@ const Item = styled.div`
   cursor: pointer;
   flex: 1 0;
   padding: 10px;
-  margin: 0 10px;`
+  margin: 0 10px;
+  text-align: center;
+  width: 100px;`
 
 const MenuItem = ({
   title,
-  key,
   onClick,
 }) => {
-  return <Item key={key} onClick={onClick(title)}>{title}</Item>
+  return <Item onClick={() => onClick(title)}>{title}</Item>
 }
 
 export default MenuItem;
