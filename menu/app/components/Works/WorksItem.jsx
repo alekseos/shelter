@@ -1,13 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 const Wrapper = styled.div`
-  position: relative;`
+  position: relative;
+  margin: 0 10px 20px 10px;`
 const Item = styled.div`
   cursor: pointer;
   height: 200px;
-  margin: 0 10px 20px 10px;
   overflow: hidden;
-  padding: 10px;
 
   &:hover .mask {
      opacity: 1;
@@ -23,16 +22,15 @@ const Mask = styled.div`
    position: absolute;
    top: 0;
    transition: all 0.6s ease-in-out;
-   width: 100%;`
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;`
 const Image = styled.img`
   height: 100%;`
 const Description = styled.div`
   color: white;
-  left: 20%;
-  position: absolute;
-  text-align: center;
-  top: 25%;
-  width: 60%;`
+  text-align: center;`
 
 const WorksItem= ({
   title,
