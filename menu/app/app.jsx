@@ -32,6 +32,9 @@ class App extends React.Component {
 	render() {
 		return <Provider store={this.store}>
 			<Wrapper>
+				<Input
+					placeholder={'Name'}
+				/>
 				<Menu
 					titles={[
 						'All projects',

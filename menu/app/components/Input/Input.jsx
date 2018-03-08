@@ -1,11 +1,7 @@
 import React from 'react';
-
 import styled from 'styled-components';
-
 const Wrapper = styled.section`
-  padding: 20px 0;
-`;
-
+  padding: 20px 0;`;
 const ItemContainer= styled.input`
   border: 1px solid rgba(35, 34, 38, .5);
   box-sizing: border-box;
@@ -15,8 +11,7 @@ const ItemContainer= styled.input`
   font-size: 16px;
   margin: 0 auto;
   padding: 20px;
-  width: 380px;
-`
+  width: 380px;`
 
 const Input = ({
   placeholder
