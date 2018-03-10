@@ -32,7 +32,7 @@ const Description = styled.div`
   color: white;
   text-align: center;`
 
-const WorksItem= ({
+const WorksItem = ({
   title,
   image,
 }) => {
@@ -44,6 +44,6 @@ const WorksItem= ({
       </Mask>
     </Item>
   </Wrapper>
-}
+};
 
 export default WorksItem;

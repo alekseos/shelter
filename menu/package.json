@@ -24,12 +24,11 @@
     "gulp-watch": "^4.3.11",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "styled-components": "^2.4.0",
     "vinyl-source-stream": "^1.1.0"
   },
   "description": "",
-  "dependencies": {
-    "react-redux": "^5.0.6",
-    "redux": "^3.7.2",
-    "styled-components": "^2.4.0"
-  }
+  "dependencies": {}
 }

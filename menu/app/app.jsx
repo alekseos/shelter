@@ -37,11 +37,11 @@ class App extends React.Component {
 				/>
 				<Menu
 					titles={[
-						'All projects',
-						'Landing pages',
-						'Online stores',
-						'Apps',
-						'Design'
+						'allProject',
+						'landingPage',
+						'onlineStore',
+						'app',
+						'design'
 					]}
 				/>
 				<Works/>

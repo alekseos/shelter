@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-const Item = styled.div`
+const ItemActive = styled.div`
   background-color: blue;
   border-radius: 32px;
   color: white;
@@ -9,13 +9,28 @@ const Item = styled.div`
   padding: 10px;
   margin: 0 10px;
   text-align: center;
-  width: 100px;`
+  width: 100px;
+  transition: all 2s ease-in-out;`
+const Item = styled.div`
+  color: black;
+  cursor: pointer;
+  flex: 1 0;
+  padding: 10px;
+  margin: 0 10px;
+  text-align: center;
+  width: 100px;
+  transition: all 2s ease-in-out;`
 
 const MenuItem = ({
   title,
   onClick,
+  active = null,
 }) => {
-  return <Item onClick={() => onClick(title)}>{title}</Item>
+  if (active !== null) {
+    return <ItemActive onClick={() => onClick(title)}>{title}</ItemActive>
+  } else {
+    return <Item onClick={() => onClick(title)}>{title}</Item>
+  }
 }
 
 export default MenuItem;

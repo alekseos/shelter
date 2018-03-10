@@ -29,9 +29,15 @@ class MenuBlock extends React.Component {
   }
 
   mappingItems = () => {
-    let { titles } = this.props;
+    let { titles, filter } = this.props;
 
-    const titleItems = titles.map( (title, key) => <MenuItem title={title} key={key} onClick={this.handleClick}/>);
+    const titleItems = titles.map( (title, key) => {
+      if (title === filter.filter) {
+        return <MenuItem active={true} title={title} key={key} onClick={this.handleClick}/>;
+      } else {
+        return <MenuItem title={title} key={key} onClick={this.handleClick}/>;
+      }
+    });
 
     return <MenuContainer>{titleItems}</MenuContainer>;
   }
@@ -53,15 +59,15 @@ const mapDispatchToProps = (dispatch) => {
   return {
     dispatchFilterType: (title) => {
       switch (title) {
-        case 'All projects':
+        case 'allProject':
           return dispatch(filterAllProjects());
-        case 'Landing pages':
+        case 'landingPage':
           return dispatch(filterLandingPage());
-        case 'Online stores':
+        case 'onlineStore':
           return dispatch(filterOnlineStore());
-        case 'Design':
+        case 'design':
           return dispatch(filterDesign());
-        case 'Apps':
+        case 'app':
           return dispatch(filterApp());
         default:
           return dispatch(filterAllProjects());
