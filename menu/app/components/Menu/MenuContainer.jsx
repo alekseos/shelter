@@ -28,14 +28,49 @@ class MenuBlock extends React.Component {
     this.props.dispatchFilterType(title);
   }
 
+  convertToReadableTitles = (title) => {
+    let readableTitle = '';
+
+    switch (title) {
+      case 'allProject':
+        return readableTitle = 'All projects';
+      case 'landingPage':
+        return readableTitle = 'Landing pages';
+      case 'onlineStore':
+        return readableTitle = 'Online stores';
+      case 'app':
+        return readableTitle = 'Apps';
+      case 'design':
+        return readableTitle = 'Design';
+      default:
+        return readableTitle;
+    }
+
+    return readableTitle;
+  }
+
   mappingItems = () => {
     let { titles, filter } = this.props;
 
     const titleItems = titles.map( (title, key) => {
+
+      let readableTitle = this.convertToReadableTitles(title);
+
       if (title === filter.filter) {
-        return <MenuItem active={true} title={title} key={key} onClick={this.handleClick}/>;
+        return <MenuItem
+          active={true}
+          readableTitle={readableTitle}
+          title={title}
+          key={key}
+          onClick={this.handleClick}
+        />;
       } else {
-        return <MenuItem title={title} key={key} onClick={this.handleClick}/>;
+        return <MenuItem
+          readableTitle={readableTitle}
+          title={title}
+          key={key}
+          onClick={this.handleClick}
+        />;
       }
     });
 

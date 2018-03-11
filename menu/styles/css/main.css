@@ -8,6 +8,16 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'roboto_slabregular';
+    src: url('../fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.eot');
+    src: url('../fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.woff') format('woff'),
+         url('../fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
 		font-family: 'latoregular';
 }
