@@ -19,3 +19,14 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'latoblack';
+    src: url('lato-black/lato-black-webfont.eot');
+    src: url('lato-black/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('lato-black/lato-black-webfont.woff') format('woff'),
+         url('lato-black/lato-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

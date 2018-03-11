@@ -18,6 +18,17 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'latoblack';
+    src: url('../fonts/fonts-packs/lato-black/lato-black-webfont.eot');
+    src: url('../fonts/fonts-packs/lato-black/lato-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fonts-packs/lato-black/lato-black-webfont.woff') format('woff'),
+         url('../fonts/fonts-packs/lato-black/lato-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
 		font-family: 'latoregular';
 }

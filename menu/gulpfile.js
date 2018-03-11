@@ -65,6 +65,7 @@ gulp.task('watch', function() {
 	gulp.watch('app/data/WorksPack/*.json', ['jsx']);
 	gulp.watch('app/images/portfolio/*.jpg', ['jsx']);
 	gulp.watch('app/reducers/*.js', ['jsx']);
+	gulp.watch('app/screens/*.jsx', ['jsx']);
 })
 
 gulp.task('default', ['jsx', 'less', 'webserver', 'livereload', 'watch']);

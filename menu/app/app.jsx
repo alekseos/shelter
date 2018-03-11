@@ -13,7 +13,8 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const Wrapper = styled.div`
 	margin: 20px;`;
 const Ul = styled.ul`
-	list-style-type: none;`;
+	list-style-type: none;
+	text-decoration: none;`;
 const Li = styled.li`
 	display: inline-block;
 	margin-right:20px;
@@ -23,10 +24,16 @@ const Li = styled.li`
 const Nav = styled.nav`
 	width:100vh;
 	height:45px;
+	padding-right: 20vh;
 	-webkit-transform-origin: left center;
-  -webkit-transform:rotate(-90deg) translateX(-100%);`;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}`;
 const Content = styled.div`
-  margin: 0 0 0 30px;`;
+  margin: 0 80px;`;
 
 const appReducers = combineReducers({
   works, filter
@@ -35,19 +42,21 @@ const appReducers = combineReducers({
 const Skelet = () => (
   <Router>
     <div>
-			<Nav>
-				<Ul>
-					<Li>
-						<Link to="/">Home</Link>
-					</Li>
-					<Li>
-						<Link to="/portfolio">Portfolio</Link>
-					</Li>
-					<Li>
-						<Link to="/form">Form</Link>
-					</Li>
-				</Ul>
-			</Nav>
+			<div>
+				<Nav>
+					<Ul>
+						<Li>
+							<Link to="/">Home</Link>
+						</Li>
+						<Li>
+							<Link to="/portfolio">Portfolio</Link>
+						</Li>
+						<Li>
+							<Link to="/form">Form</Link>
+						</Li>
+					</Ul>
+				</Nav>
+			</div>
 
 			<Content>
 				<Route exact path="/" component={Home} />
