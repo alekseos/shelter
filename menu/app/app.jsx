@@ -5,10 +5,10 @@ import { combineReducers } from 'redux';
 import styled from 'styled-components';
 import { filter } from './reducers/filter';
 import { works } from './reducers/works';
-import Input from './components/Input/Input';
-import Menu from './components/Menu/MenuContainer';
-import Works from './components/Works/WorksContainer';
 import WorksPackDemo from './data/WorksPack/WorksPack.json';
+import { Home } from './screens/home.jsx';
+import { Portfolio } from './screens/portfolio.jsx';
+import { Form } from './screens/form.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const Wrapper = styled.div`
 	margin: 20px;`;
@@ -27,13 +27,6 @@ const Nav = styled.nav`
   -webkit-transform:rotate(-90deg) translateX(-100%);`;
 const Content = styled.div`
   margin: 0 0 0 30px;`;
-const H1 = styled.h1`
-	line-height: 30px;
-  font-size: 85px;
-`;
-const Description = styled.div`
-	font-family: roboto_slabregular;
-`;
 
 const appReducers = combineReducers({
   works, filter
@@ -64,48 +57,6 @@ const Skelet = () => (
     </div>
   </Router>
 );
-
-const Home = () => {
-	return <div>
-		<H1>Design</H1>
-		<H1>Development</H1>
-		<H1>Promotion</H1>
-		<Description>
-			You have been looking for and found!
-			Our team will help your bussines
-			to rise to a new level.
-		</Description>
-	</div>
-};
-
-const Portfolio = () => {
-	return <div>
-		<Menu
-			titles={[
-				'allProject',
-				'landingPage',
-				'onlineStore',
-				'app',
-				'design'
-			]}
-		/>
-		<Works/>
-	</div>
-};
-
-const Form = () => {
-	return <div>
-		<Input
-			placeholder={'Name'}
-		/>
-		<Input
-			placeholder={'Female'}
-		/>
-		<Input
-			placeholder={'Phone'}
-		/>
-	</div>
-}
 
 class App extends React.Component {
 	constructor () {
