@@ -17,16 +17,17 @@ const Ul = styled.ul`
 	text-decoration: none;`;
 const Li = styled.li`
 	display: inline-block;
-	margin-right:20px;
-	float:right;
-	height:100%;
-	line-height:45px;`;
+	margin-right: 20px;
+	float: right;
+	height: 100%;
+	line-height: 45px;`;
 const Nav = styled.nav`
-	width:100vh;
-	height:45px;
+	width: 95vh;
+	height: 45px;
 	padding-right: 20vh;
 	-webkit-transform-origin: left center;
   -webkit-transform:rotate(-90deg) translateX(-100%);
+	box-sizing: border-box;
 
 	a {
 		text-decoration: none;
