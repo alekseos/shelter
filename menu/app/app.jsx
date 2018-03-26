@@ -9,6 +9,7 @@ import WorksPackDemo from './data/WorksPack/WorksPack.json';
 import { Home } from './screens/home.jsx';
 import { Portfolio } from './screens/portfolio.jsx';
 import { Form } from './screens/form.jsx';
+import { Benefits } from './screens/benefits.jsx';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 const Wrapper = styled.div`
 	margin: 20px;`;
@@ -50,6 +51,9 @@ const Skelet = () => (
 							<Link to="/">Home</Link>
 						</Li>
 						<Li>
+							<Link to="/benefits">Benefits</Link>
+						</Li>
+						<Li>
 							<Link to="/portfolio">Portfolio</Link>
 						</Li>
 						<Li>
@@ -61,6 +65,7 @@ const Skelet = () => (
 
 			<Content>
 				<Route exact path="/" component={Home} />
+				<Route path="/benefits" component={Benefits} />
 				<Route path="/portfolio" component={Portfolio} />
 				<Route path="/form" component={Form} />
 			</Content>

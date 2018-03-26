@@ -12,6 +12,13 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'latoblack';
+  src: url('../fonts/fonts-packs/lato-black/lato-black-webfont.eot');
+  src: url('../fonts/fonts-packs/lato-black/lato-black-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fonts-packs/lato-black/lato-black-webfont.woff') format('woff'), url('../fonts/fonts-packs/lato-black/lato-black-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: 'latoregular';
 }
@@ -28,6 +35,13 @@ body {
   font-family: 'roboto_slabregular';
   src: url('roboto-slab/robotoslab-regular-webfont.eot');
   src: url('roboto-slab/robotoslab-regular-webfont.eot?#iefix') format('embedded-opentype'), url('roboto-slab/robotoslab-regular-webfont.woff') format('woff'), url('roboto-slab/robotoslab-regular-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'latoblack';
+  src: url('lato-black/lato-black-webfont.eot');
+  src: url('lato-black/lato-black-webfont.eot?#iefix') format('embedded-opentype'), url('lato-black/lato-black-webfont.woff') format('woff'), url('lato-black/lato-black-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
