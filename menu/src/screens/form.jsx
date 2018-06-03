@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Button from '../components/Button/Button.jsx';
 import Input from '../components/Input/Input.jsx';
 
 export const Form = () => {
@@ -12,6 +13,10 @@ export const Form = () => {
 		/>
 		<Input
 			placeholder={'Phone'}
+		/>
+		<Button
+			style={{margin: '0 auto'}}
+			content={'Send'}
 		/>
 	</div>
 }

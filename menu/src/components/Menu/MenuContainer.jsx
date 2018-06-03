@@ -17,6 +17,10 @@ class MenuBlock extends React.Component {
     super(props);
   }
 
+  componentWillMount = () => {
+    this.props.dispatchFilterType('allProject');
+  }
+
   handleClick = (title) => {
     this.props.dispatchFilterType(title);
   }

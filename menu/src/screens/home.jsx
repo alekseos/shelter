@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import Button from '../components/Button/Button.jsx';
+
 const Wrapper = styled.div`
   display: flex;`;
 const OfferContainer = styled.div`
   flex: 1;
-  position: relative`;
+  position: relative;`;
 const Offer = styled.div`
   position: absolute;
   left: 100px;
-  font-family: latoblack`;
+  font-family: latoblack;`;
 const H1 = styled.h1`
 	line-height: 30px;
   font-size: 85px;
@@ -26,17 +28,6 @@ const Image = styled.img`
   width: 494px;
   content: 'Hi, visitors! Here should be an img :)';
   `;
-const Button = styled.div`
-  background-color: blue;
-  color: white;
-  border-radius: 65px;
-  width: inherit;
-  font-family: roboto_slabregular;
-  padding: 10px 20px;
-  display: inline-block;
-  margin: 30px 0 0 0;
-  cursor: pointer;
-`;
 
 export const Home = () => {
 	return <Wrapper>
@@ -50,9 +41,9 @@ export const Home = () => {
           Our team will help your bussines
           to rise to a new level.
         </Description>
-        <Button>
-          Let's start
-        </Button>
+        <Button 
+          content={'Let\'s start'}
+        />
       </Offer>
     </OfferContainer>
 
