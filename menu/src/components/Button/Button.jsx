@@ -9,19 +9,25 @@ const ButtonContainer = styled.div`
   font-family: roboto_slabregular;
   padding: 10px 20px;
   display: inline-block;
-  margin: 30px 0 0 0;
+  margin: 30px auto 0 auto;
   cursor: pointer;
+  min-width: 100px;
+  text-align: center;
+`;
+
+const WrapperContainer = styled.section`
+    display: flex;
 `;
 
 const Button = ({
     content = 'default content',
     onClick = () => {},
 }) => {
-    return <ButtonContainer
-        onClick={() => onClick()}
-    >
-        {content}
-    </ButtonContainer>
+    return <WrapperContainer>
+        <ButtonContainer onClick={() => onClick()}>
+            {content}
+        </ButtonContainer>
+    </WrapperContainer>
 }
 
 export default Button;
