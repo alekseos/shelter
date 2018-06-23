@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import * as Redux from 'redux';
 import { combineReducers } from 'redux';
+import * as Redux from 'redux';
 import styled from 'styled-components';
 
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
@@ -13,40 +13,10 @@ import { Form } from './screens/form.jsx';
 import { Home } from './screens/home.jsx';
 import { Portfolio } from './screens/portfolio.jsx';
 
-const Wrapper = styled.div`
-	margin: 20px;`;
-const Ul = styled.ul`
-	list-style-type: none;
-	text-decoration: none;`;
-const Li = styled.li`
-	display: inline-block;
-	margin-right: 20px;
-	float: right;
-	height: 100%;
-	line-height: 45px;`;
-const Nav = styled.nav`
-	width: 95vh;
-	height: 45px;
-	padding-right: 20vh;
-	-webkit-transform-origin: left center;
-  -webkit-transform:rotate(-90deg) translateX(-100%);
-	box-sizing: border-box;
-
-	a {
-		text-decoration: none;
-		color: inherit;
-	}`;
-const Content = styled.div`
-  margin: 0 80px;`;
-
-const appReducers = combineReducers({
-  works, filter
-});
-
 const Skelet = () => (
   <Router>
     <div>
-			<div>
+			<NavContainer>
 				<Nav>
 					<Ul>
 						<Li>
@@ -63,7 +33,7 @@ const Skelet = () => (
 						</Li>
 					</Ul>
 				</Nav>
-			</div>
+			</NavContainer>
 
 			<Content>
 				<Route exact path="/" component={Home} />
@@ -97,5 +67,37 @@ class App extends React.Component {
 	}
 }
 
+const Wrapper = styled.div`
+	margin: -50px 20px 0 20px;`;
+const Ul = styled.ul`
+	list-style-type: none;
+	text-decoration: none;`;
+const Li = styled.li`
+	display: inline-block;
+	margin-right: 20px;
+	float: right;
+	height: 100%;
+	line-height: 45px;`;
+const NavContainer = styled.div`
+	line-height: 0;
+`;
+const Nav = styled.nav`
+	width: 95vh;
+	height: 45px;
+	padding-right: 26vh;
+	-webkit-transform-origin: left center;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
+	box-sizing: border-box;
+
+	a {
+		text-decoration: none;
+		color: inherit;
+	}`;
+const Content = styled.div`
+	margin: 0 80px;
+	height: 95vh;`;
+const appReducers = combineReducers({
+	works, filter
+});
 
 export default App;

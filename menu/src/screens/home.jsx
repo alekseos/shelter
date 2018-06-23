@@ -4,10 +4,14 @@ import styled from 'styled-components';
 import Button from '../components/Button/Button.jsx';
 
 const Wrapper = styled.div`
-  display: flex;`;
+  display: flex;
+  height: 100%;`;
 const OfferContainer = styled.div`
   flex: 1;
-  position: relative;`;
+  position: relative;
+  justify-content: center;
+    align-items: center;
+    display: flex;`;
 const Offer = styled.div`
   position: absolute;
   left: 100px;
@@ -21,7 +25,10 @@ const Description = styled.div`
   width: 400px;
   color: #908f8f;`;
 const ImageContainer  = styled.div`
-  flex: 1;`;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  display: flex;`;
 const Image = styled.img`
   background: url('../src/images/hi.png');
   height: 480px;
