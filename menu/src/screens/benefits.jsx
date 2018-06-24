@@ -127,13 +127,15 @@ const Count = styled.span`
 `;
 const BenefitDescription = styled.div`
   margin: 20px 0 0 0;
+  max-width: 100px;
+  text-align: center;
 `;
 const BenefitItem = styled.div`
-  height: 180px;
+  height: 170px;
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 `;
 const BenefitItemContainer = styled.div`
 

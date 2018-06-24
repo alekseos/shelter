@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const Wrapper = styled.div`
   position: relative;
   margin: 0 10px 20px 10px;`
 const Item = styled.div`
   cursor: pointer;
-  height: 200px;
+  height: 300px;
   overflow: hidden;
 
   &:hover .mask {

@@ -2,30 +2,30 @@ const WorksPackDemo = [
 
 {
   id: 1,
-  title: "I\'m a 1 work",
-  image: "../../src/images/portfolio/1.jpg",
+  title: "I'm a 1 work",
+  image: "../../src/images/portfolio/tofa.png",
   tags:
   [
     "allProject",
-    "design"
+    "landingPage"
   ]
 }, {
   id: 2,
   title: "I'm a 2 work",
-  image: "../../src/images/portfolio/2.jpg",
+  image: "../../src/images/portfolio/pepper.png",
   tags:
   [
     "allProject",
-    "design"
+    "landingPage"
   ]
 }, {
   id: 3,
   title: "I'm a 3 work",
-  image: "../../src/images/portfolio/3.jpg",
+  image: "../../src/images/portfolio/smart.png",
   tags:
   [
     "allProject",
-    "design"
+    "landingPage"
   ]
 }, {
   id: 4,

@@ -22,9 +22,10 @@ const WrapperContainer = styled.section`
 const Button = ({
     content = 'default content',
     onClick = () => {},
+    style,
 }) => {
     return <WrapperContainer>
-        <ButtonContainer onClick={() => onClick()}>
+        <ButtonContainer onClick={() => onClick()} style={style}>
             {content}
         </ButtonContainer>
     </WrapperContainer>

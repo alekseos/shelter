@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Button from '../components/Button/Button.jsx';
@@ -15,7 +16,8 @@ const OfferContainer = styled.div`
 const Offer = styled.div`
   position: absolute;
   left: 100px;
-  font-family: latoblack;`;
+  font-family: latoblack;
+  margin: -45px 0 0 0;`;
 const H1 = styled.h1`
 	line-height: 30px;
   font-size: 85px;
@@ -48,9 +50,13 @@ export const Home = () => {
           Our team will help your bussines
           to rise to a new level.
         </Description>
-        <Button 
-          content={'Let\'s start'}
-        />
+
+        <NavLink exact to="/portfolio" activeClassName="active">
+          <Button
+            content={'Start'}
+            style={{margin: '30px 0 0 0'}}
+          />
+        </NavLink>
       </Offer>
     </OfferContainer>
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import { combineReducers } from 'redux';
+import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
 import * as Redux from 'redux';
+import { combineReducers } from 'redux';
 import styled from 'styled-components';
 
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
@@ -20,16 +20,16 @@ const Skelet = () => (
 				<Nav>
 					<Ul>
 						<Li>
-							<Link to="/">Home</Link>
+							<NavLink exact to="/" activeClassName="active">Home</NavLink>
 						</Li>
 						<Li>
-							<Link to="/benefits">Benefits</Link>
+							<NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
 						</Li>
 						<Li>
-							<Link to="/portfolio">Portfolio</Link>
+							<NavLink to="/benefits" activeClassName="active">Benefits</NavLink>
 						</Li>
 						<Li>
-							<Link to="/form">Form</Link>
+							<NavLink to="/form" activeClassName="active">Form</NavLink>
 						</Li>
 					</Ul>
 				</Nav>
@@ -37,8 +37,8 @@ const Skelet = () => (
 
 			<Content>
 				<Route exact path="/" component={Home} />
-				<Route path="/benefits" component={Benefits} />
 				<Route path="/portfolio" component={Portfolio} />
+				<Route path="/benefits" component={Benefits} />
 				<Route path="/form" component={Form} />
 			</Content>
     </div>
