@@ -1,4 +1,4 @@
-import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORE, APP, DESIGN } from '../constants/filter.js';
+import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from '../constants/filter.js';
 
 export function filter (state = {}, action) {
   switch (action.type) {
@@ -12,7 +12,7 @@ export function filter (state = {}, action) {
         state: state,
         filter: action.filter
       };
-    case ONLINE_STORE:
+    case ELEMENTS:
       return {
         state: state,
         filter: action.filter

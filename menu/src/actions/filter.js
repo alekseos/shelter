@@ -1,4 +1,4 @@
-import { ALL_PROJECTS, LANDING_PAGE, ONLINE_STORE, APP, DESIGN } from '../constants/filter.js';
+import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from '../constants/filter.js';
 
 export function filterAllProjects() {
   return {
@@ -14,10 +14,10 @@ export function filterLandingPage() {
   }
 }
 
-export function filterOnlineStore() {
+export function filterElements() {
   return {
-    type: ONLINE_STORE,
-    filter: "onlineStore"
+    type: ELEMENTS,
+    filter: "elements"
   }
 }
 

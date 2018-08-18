@@ -137,6 +137,4 @@ const BenefitItem = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 `;
-const BenefitItemContainer = styled.div`
-
-`;
+const BenefitItemContainer = styled.div``;

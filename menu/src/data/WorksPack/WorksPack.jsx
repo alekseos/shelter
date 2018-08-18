@@ -3,7 +3,7 @@ const WorksPackDemo = [
 {
   id: 1,
   title: "I'm a 1 work",
-  image: "../../src/images/portfolio/tofa.png",
+  image: "../../src/images/portfolio/3-1.png",
   tags:
   [
     "allProject",
@@ -12,7 +12,7 @@ const WorksPackDemo = [
 }, {
   id: 2,
   title: "I'm a 2 work",
-  image: "../../src/images/portfolio/pepper.png",
+  image: "../../src/images/portfolio/3-2.png",
   tags:
   [
     "allProject",
@@ -21,7 +21,7 @@ const WorksPackDemo = [
 }, {
   id: 3,
   title: "I'm a 3 work",
-  image: "../../src/images/portfolio/smart.png",
+  image: "../../src/images/portfolio/3-3.png",
   tags:
   [
     "allProject",
@@ -29,109 +29,59 @@ const WorksPackDemo = [
   ]
 }, {
   id: 4,
-  title: "I'm a 4 work",
-  image: "../../src/images/portfolio/4.jpg",
+  title: "I'm a 9 work",
+  image: "../../src/images/portfolio/2-1.png",
   tags:
-  [
-    "allProject",
-    "onlineStore",
-    "design"
-  ]
-}, {
+    [
+      "allProject",
+      "design"
+    ]
+},{
   id: 5,
-  title: "I'm a 5 work",
-  image: "../../src/images/portfolio/5.jpg",
+  title: "I'm a 4 work",
+  image: "../../src/images/portfolio/1_1.png",
   tags:
   [
     "allProject",
-    "design"
+    "elements"
   ]
 }, {
   id: 6,
-  title: "I'm a 6 work. I started that work in a good time",
-  image: "../../src/images/portfolio/6.gif",
+  title: "I'm a 5 work",
+  image: "../../src/images/portfolio/1_2.png",
   tags:
   [
     "allProject",
-    "design"
+    "elements"
   ]
 }, {
   id: 7,
-  title: "I'm a 7 work",
-  image: "../../src/images/portfolio/7.jpg",
+  title: "I'm a 6 work. I started that work in a good time",
+  image: "../../src/images/portfolio/1_3.png",
   tags:
   [
     "allProject",
-    "design",
+    "elements"
   ]
 }, {
   id: 8,
-  title: "8 work",
-  image: "../../src/images/portfolio/8.jpg",
+  title: "I'm a 7 work",
+  image: "../../src/images/portfolio/1_4.png",
   tags:
   [
     "allProject",
-    "landingPage",
-    "design"
+    "elements",
   ]
 }, {
   id: 9,
-  title: "I'm a 9 work",
-  image: "../../src/images/portfolio/9.jpg",
+  title: "8 work",
+  image: "../../src/images/portfolio/1_5.png",
   tags:
   [
     "allProject",
-    "onlineStore",
-    "design"
+    "elements"
   ]
-}, {
-  id: 10,
-  title: "I'm a 10 work. It was a good trip. I'm remeber all of that. Thank's my team!!!",
-  image: "../../src/images/portfolio/10.jpg",
-  tags:
-  [
-    "allProject",
-    "landingPage",
-    "design"
-  ]
-}, {
-  id: 11,
-  title: "I'm a 11 work",
-  image: "../../src/images/portfolio/11.jpg",
-  tags:
-  [
-    "allProject",
-    "design"
-  ]
-}, {
-  id: 12,
-  title: "I'm a 12 work",
-  image: "../../src/images/portfolio/12.jpg",
-  tags:
-  [
-    "allProject",
-    "app",
-    "onlineStore"
-  ]
-}, {
-  id: 13,
-  title: "I'm a 13 work",
-  image: "../../src/images/portfolio/13.jpg",
-  tags:
-  [
-    "allProject",
-    "design"
-  ]
-}, {
-  id: 14,
-  title: "I'm a 14 work",
-  image: "../../src/images/portfolio/14.jpg",
-  tags:
-  [
-    "allProject",
-    "design",
-  ]
-}
+},
 
 ]
 

@@ -9,8 +9,7 @@ export const Portfolio = () => {
 			titles={[
 				'allProject',
 				'landingPage',
-				'onlineStore',
-				'app',
+				'elements',
 				'design'
 			]}
 		/>

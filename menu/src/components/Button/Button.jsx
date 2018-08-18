@@ -6,6 +6,7 @@ const ButtonContainer = styled.div`
   color: white;
   border-radius: 65px;
   width: inherit;
+  font-size: 24px;
   font-family: roboto_slabregular;
   padding: 10px 20px;
   display: inline-block;

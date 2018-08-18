@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import { filterAllProjects, filterApp, filterDesign, filterLandingPage, filterOnlineStore } from '../../actions/filter.js';
+import { filterAllProjects, filterApp, filterDesign, filterElements, filterLandingPage } from '../../actions/filter.js';
 import MenuItem from '../Menu/MenuItem.jsx';
 
 const Wrapper = styled.section`
@@ -33,8 +33,8 @@ class MenuBlock extends React.Component {
         return readableTitle = 'All projects';
       case 'landingPage':
         return readableTitle = 'Landing pages';
-      case 'onlineStore':
-        return readableTitle = 'Online stores';
+      case 'elements':
+        return readableTitle = 'Elements';
       case 'app':
         return readableTitle = 'Apps';
       case 'design':
@@ -104,8 +104,8 @@ const mapDispatchToProps = (dispatch) => {
           return dispatch(filterAllProjects());
         case 'landingPage':
           return dispatch(filterLandingPage());
-        case 'onlineStore':
-          return dispatch(filterOnlineStore());
+        case 'elements':
+          return dispatch(filterElements());
         case 'design':
           return dispatch(filterDesign());
         case 'app':

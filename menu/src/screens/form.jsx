@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Button from '../components/Button/Button.jsx';
 import Input from '../components/Input/Input.jsx';
+import TextArea from '../components/TextArea/TextArea.jsx';
 
 export const Form = () => {
 	return <FormContainer>
@@ -11,11 +12,12 @@ export const Form = () => {
 				placeholder={'Name'}
 			/>
 			<Input
-				placeholder={'Female'}
+				placeholder={'Surname'}
 			/>
 			<Input
 				placeholder={'Phone'}
 			/>
+			<TextArea />
 			<Button
 				style={{ margin: '0 auto' }}
 				content={'Send'}
@@ -29,11 +31,8 @@ const FormContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-`;
-
+	justify-content: center;`;
 const FormItem = styled.div`
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-`;
+	align-items: center;`;

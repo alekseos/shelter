@@ -21,7 +21,7 @@ const Offer = styled.div`
 const H1 = styled.h1`
 	line-height: 30px;
   font-size: 85px;
-  letter-spacing: 4px;`;
+  letter-spacing: 2px;`;
 const Description = styled.div`
 	font-family: roboto_slabregular;
   width: 400px;
