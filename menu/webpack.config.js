@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'dist/app.bundle.js'
+    filename: 'dist/app.bundle.js',
+    publicPath: '/'
   },
   module: {
     rules: [
@@ -22,6 +23,7 @@ module.exports = {
     ]
   },
   devServer: {
+    historyApiFallback: true,
     compress: true,
     port: 3000,
   }

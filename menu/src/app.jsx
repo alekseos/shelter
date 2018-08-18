@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, NavLink, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import * as Redux from 'redux';
 import { combineReducers } from 'redux';
 import styled from 'styled-components';
@@ -16,31 +16,31 @@ import { Portfolio } from './screens/portfolio.jsx';
 const Skelet = () => (
   <Router>
     <div>
-			<NavContainer>
-				<Nav>
-					<Ul>
-						<Li>
-							<NavLink exact to="/" activeClassName="active">Home</NavLink>
-						</Li>
-						<Li>
-							<NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
-						</Li>
-						<Li>
-							<NavLink to="/benefits" activeClassName="active">Benefits</NavLink>
-						</Li>
-						<Li>
-							<NavLink to="/form" activeClassName="active">Form</NavLink>
-						</Li>
-					</Ul>
-				</Nav>
-			</NavContainer>
+		<NavContainer>
+			<Nav>
+				<Ul>
+					<Li>
+						<Link exact to="/" activeClassName="active">Home</Link>
+					</Li>
+					<Li>
+						<Link to="/portfolio" activeClassName="active">Portfolio</Link>
+					</Li>
+					<Li>
+						<Link to="/benefits" activeClassName="active">Benefits</Link>
+					</Li>
+					<Li>
+						<Link to="/form" activeClassName="active">Form</Link>
+					</Li>
+				</Ul>
+			</Nav>
+		</NavContainer>
 
-			<Content>
-				<Route exact path="/" component={Home} />
-				<Route path="/portfolio" component={Portfolio} />
-				<Route path="/benefits" component={Benefits} />
-				<Route path="/form" component={Form} />
-			</Content>
+		<Content>
+			<Route exact path="/" component={Home} />
+			<Route path="/portfolio" component={Portfolio} />
+			<Route path="/benefits" component={Benefits} />
+			<Route path="/form" component={Form} />
+		</Content>
     </div>
   </Router>
 );
