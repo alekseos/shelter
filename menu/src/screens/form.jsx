@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Button from '../components/Button/Button.jsx';
@@ -18,10 +19,13 @@ export const Form = () => {
 				placeholder={'Phone'}
 			/>
 			<TextArea />
-			<Button
-				style={{ margin: '0 auto' }}
-				content={'Send'}
-			/>
+
+			<Link exact to="/thanksForm" activeClassName="active">
+				<Button
+					style={{ margin: '0 auto' }}
+					content={'Send'}
+				/>
+			</Link>
 		</div>
 	</FormContainer>
 }

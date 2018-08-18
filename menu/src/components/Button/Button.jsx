@@ -14,6 +14,10 @@ const ButtonContainer = styled.div`
   cursor: pointer;
   min-width: 100px;
   text-align: center;
+
+  text-decoration: underline;
+  -webkit-text-decoration-color: blue; 
+  text-decoration-color: blue;
 `;
 
 const WrapperContainer = styled.section`

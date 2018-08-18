@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import * as Redux from 'redux';
 import { combineReducers } from 'redux';
+import * as Redux from 'redux';
 import styled from 'styled-components';
 
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
@@ -12,6 +12,7 @@ import { Benefits } from './screens/benefits.jsx';
 import { Form } from './screens/form.jsx';
 import { Home } from './screens/home.jsx';
 import { Portfolio } from './screens/portfolio.jsx';
+import { ThanksForm } from './screens/thanksForm.jsx';
 
 const Skelet = () => (
   <Router>
@@ -40,6 +41,7 @@ const Skelet = () => (
 			<Route path="/portfolio" component={Portfolio} />
 			<Route path="/benefits" component={Benefits} />
 			<Route path="/form" component={Form} />
+			<Route path="/thanksform" component={ThanksForm} />
 		</Content>
     </div>
   </Router>
@@ -68,7 +70,12 @@ class App extends React.Component {
 }
 
 const Wrapper = styled.div`
-	margin: -50px 20px 0 20px;`;
+	margin: -50px 20px 0 20px;
+
+	/* @media (min-width: 1800px) and (min-height: 1000px) { */
+		margin: 0;
+	/* } */
+	`;
 const Ul = styled.ul`
 	list-style-type: none;
 	text-decoration: none;`;
@@ -77,25 +84,47 @@ const Li = styled.li`
 	margin-right: 20px;
 	float: right;
 	height: 100%;
-	line-height: 45px;`;
+	line-height: 45px;
+	
+	/* @media (min-width: 1800px) and (min-height: 1000px) { */
+		margin-right: 40px;
+	/* } */
+	
+	`;
 const NavContainer = styled.div`
 	line-height: 0;
 `;
 const Nav = styled.nav`
-	width: 95vh;
 	height: 45px;
 	padding-right: 26vh;
 	-webkit-transform-origin: left center;
-  -webkit-transform:rotate(-90deg) translateX(-100%);
+    -webkit-transform:rotate(-90deg) translateX(-100%);
 	box-sizing: border-box;
 
 	a {
 		text-decoration: none;
 		color: inherit;
-	}`;
+	}
+	
+	/* @media (min-width: 1800px) and (min-height: 1000px) { */
+		font-size: 30px;
+		margin-top: 23px;
+		position: absolute;
+		left: 106px;
+		padding-right: 177px;
+		width: 94vh;
+	}
+	/* } */
+	`;
 const Content = styled.div`
 	margin: 0 80px;
-	height: 95vh;`;
+	height: 95vh;
+
+	/* @media (min-width: 1800px) and (min-height: 1000px) { */
+		margin: 0 220px;
+		height: 95vh;
+	/* } */
+	`;
 const appReducers = combineReducers({
 	works, filter
 });
