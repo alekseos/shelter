@@ -6,8 +6,8 @@ import Button from '../components/Button/Button.jsx';
 import Input from '../components/Input/Input.jsx';
 import TextArea from '../components/TextArea/TextArea.jsx';
 
-export const Form = () => {
-	return <FormContainer>
+export const Contacts = () => {
+	return <ContactsContainer>
 		<div>
 			<Input
 				placeholder={'Name'}
@@ -27,16 +27,16 @@ export const Form = () => {
 				/>
 			</Link>
 		</div>
-	</FormContainer>
+	</ContactsContainer>
 }
 
-const FormContainer = styled.div`
+const ContactsContainer = styled.div`
 	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;`;
-const FormItem = styled.div`
-	display: flex;
-	flex-direction: column;
-	align-items: center;`;
+// const ContactsItem = styled.div`
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;`;

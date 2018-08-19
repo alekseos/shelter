@@ -18,6 +18,13 @@ const ButtonContainer = styled.div`
   text-decoration: underline;
   -webkit-text-decoration-color: blue; 
   text-decoration-color: blue;
+
+  /* @media (min-width: 1800px) and (min-height: 1000px) { */
+  padding: 8px 46px 12px 46px;
+  font-size: 22px;
+  border-radius: 25px;
+  letter-spacing: 0.2px;
+  /* } */
 `;
 
 const WrapperContainer = styled.section`

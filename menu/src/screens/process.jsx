@@ -67,43 +67,43 @@ const structure = [
   },
 ]
 
-export const Benefits = () => {
-  return <BenefitContainer>
+export const Process = () => {
+  return <ProcessContainer>
     {
       structure.map(item => {
         const arrayItems = item.items;
 
         return (
-          <BenefitSection>
-            <BenefitTitle>
+          <ProcessSection>
+            <ProcessTitle>
               <Count>{item.count}</Count>
               {item.title}
-            </BenefitTitle>
+            </ProcessTitle>
             {
               arrayItems.map(arrayItem => {
                 return (
-                  <BenefitItemContainer>
-                    <BenefitItem>
+                  <ProcessItemContainer>
+                    <ProcessItem>
                       <img src={arrayItem.link} alt={arrayItem.alt} />
-                      <BenefitDescription>{arrayItem.description}</BenefitDescription>
-                    </BenefitItem>
-                  </BenefitItemContainer>
+                      <ProcessDescription>{arrayItem.description}</ProcessDescription>
+                    </ProcessItem>
+                  </ProcessItemContainer>
                 )
               })
             }
-          </BenefitSection>
+          </ProcessSection>
         )
       })
     }
 
-  </BenefitContainer>
+  </ProcessContainer>
 }
 
-const BenefitContainer = styled.div`
+const ProcessContainer = styled.div`
   display: flex;
   margin: 0 auto;
 `;
-const BenefitSection = styled.div`
+const ProcessSection = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ const BenefitSection = styled.div`
     align-items: center;
   }
 `;
-const BenefitTitle = styled.p`
+const ProcessTitle = styled.p`
   font-weight: 700;
   font-size: 20px;
 `;
@@ -125,16 +125,16 @@ const Count = styled.span`
   color: white;
   margin: 0 10px 0 0;
 `;
-const BenefitDescription = styled.div`
+const ProcessDescription = styled.div`
   margin: 20px 0 0 0;
   max-width: 100px;
   text-align: center;
 `;
-const BenefitItem = styled.div`
+const ProcessItem = styled.div`
   height: 170px;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 `;
-const BenefitItemContainer = styled.div``;
+const ProcessItemContainer = styled.div``;
