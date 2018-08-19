@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import * as Redux from 'redux';
 import { combineReducers } from 'redux';
+import * as Redux from 'redux';
 import styled from 'styled-components';
 
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
@@ -116,7 +116,7 @@ const Nav = styled.nav`
 		margin-top: 23px;
 		position: absolute;
 		left: 106px;
-		padding-right: 177px;
+		padding-right: 130px;
 		width: 94vh;
 	}
 	/* } */

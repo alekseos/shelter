@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 
-import WorksItem from '../Works/WorksItem.jsx';
+import WorksItem from './WorksItem.jsx';
 
 const Wrapper = styled.section`
   display: flex;

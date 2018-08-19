@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import styled from 'styled-components';
 
 import { filterAllProjects, filterApp, filterDesign, filterElements, filterLandingPage } from '../../actions/filter.js';
-import MenuItem from '../Menu/MenuItem.jsx';
+import MenuItem from './MenuItem.jsx';
 
 const Wrapper = styled.section`
   display: flex;
