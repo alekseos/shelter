@@ -4,22 +4,33 @@ module.exports = {
   entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'dist/app.bundle.js',
+    filename: 'app.bundle.js',
     publicPath: '/'
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/i,
         use: {
           loader: 'babel-loader',
         },
         exclude: '/node_modules/'
       },
       {
-        test: /\.json$/,
+        test: /\.json$/i,
         loader: 'json-loader'
-      }
+      },
+      {
+        test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]'
+            },
+          },
+        ]
+      },
     ]
   },
   devServer: {

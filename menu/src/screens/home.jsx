@@ -62,7 +62,7 @@ const Image = styled.img`
 
     	/* @media (min-width: 1800px) and (min-height: 1000px) { */
       background-size: 100% 100%;
-      margin: 113px 0 0 -234px;
+      margin: 115px 0px 0px -274px;
       height: 690px;
       width: 711px;
 	  /* } */
