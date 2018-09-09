@@ -17,20 +17,19 @@ class Pager extends React.Component {
                 start: "/",
                 end: "/portfolio"
             },
-            isRefresh: false      
+            isRefreshed: false      
         }
     }
 
     componentDidUpdate(){
         if (this.state.isRefresh) {
             this.refreshPage();
-            this.setState({ isRefresh: false });
+            this.setState({ isRefreshed: false });
         }
     }
 
     refreshPage = () => {
         let href = window.location.pathname;
-        let el = true;
 
         switch (href) {
             case ("/"):
@@ -97,7 +96,7 @@ class Pager extends React.Component {
                 break;
         }
 
-        this.setState({isRefresh: true});
+        this.setState({isRefreshed: true});
 
         console.log(this.state);
     }

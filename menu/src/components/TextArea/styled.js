@@ -9,7 +9,7 @@ export const TextAreaItem = styled.textarea`
   box-sizing: border-box;
   color: rgba(35, 34, 38, .5);
   display: block;
-  height: 50px;
+  height: 150px;
   font-size: 16px;
   margin: 0 auto;
   padding: 20px;

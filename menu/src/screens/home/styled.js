@@ -25,6 +25,7 @@ export const H1 = styled.h1`
 	line-height: 40px;
   font-size: 85px;
   letter-spacing: 2px;
+  color: #232226;
   
   /* @media (min-width: 1800px) and (min-height: 1000px) { */
 	  line-height: 38px;

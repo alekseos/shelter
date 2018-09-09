@@ -17,54 +17,13 @@ import { Process } from './screens/process/process.jsx';
 import { ThanksForm } from './screens/thanksForm/thanksForm.jsx';
 import { Content, Li, Logo, Nav, NavContainer, Slider, SliderContainer, Ul, Wrapper } from './styled.js';
 
-const Skelet = () => (
-  <Router>
-    <div>
-		<NavContainer>
-			<Nav>
-				<Ul>
-					<Li>
-						<Link exact to="/" activeClassName="active">
-							<Logo src={logo} />
-						</Link>
-					</Li>
-					<Li>
-						<Link to="/portfolio" activeClassName="active">Portfolio</Link>
-					</Li>
-					<Li>
-						<Link to="/process" activeClassName="active">Process</Link>
-					</Li>
-					<Li>
-						<Link to="/about" activeClassName="active">About</Link>
-					</Li>
-					<Li>
-						<Link to="/contacts" activeClassName="active">Contacts</Link>
-					</Li>
-				</Ul>
-			</Nav>
-		</NavContainer>
-
-		<Content>
-			<Route exact path="/" component={Home} />
-			<Route path="/portfolio" component={Portfolio} />
-			<Route path="/process" component={Process} />
-			<Route path="/about" component={About} />
-			<Route path="/contacts" component={Contacts} />
-			<Route path="/thanksform" component={ThanksForm} />
-		</Content>
-
-		<SliderContainer>
-			<Slider>
-				<Pager />
-			</Slider>	
-		</SliderContainer>
-    </div>
-  </Router>
-);
-
 class App extends React.Component {
 	constructor () {
 		super ();
+
+		this.state = {
+			isResfreshed: true
+		}
 
 		this.store = Redux.createStore(
 	    appReducers,
@@ -75,10 +34,75 @@ class App extends React.Component {
 	  );
 	}
 
+	componentDidUpdate() {
+		if (this.state.isRefresh) {
+			this.checkingScrollBar();
+			this.setState({ isRefresh: false });
+		}
+	} 
+
+	checkingScrollBar = () => {
+		let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
+		console.log(hasVScroll);
+	}
+
+	refreshPage = () => {
+		this.setState({ isRefreshed: true });
+	}
+
 	render() {
 		return <Provider store={this.store}>
 			<Wrapper>
-				<Skelet />
+				<Router>
+					<div>
+						<NavContainer>
+							<Nav>
+								<Ul>
+									<Li>
+										<Link exact to="/" activeClassName="active">
+											<Logo src={logo} />
+										</Link>
+									</Li>
+									<Li>
+										<Link to="/portfolio" activeClassName="active">Portfolio</Link>
+									</Li>
+									<Li>
+										<Link to="/process" activeClassName="active">Process</Link>
+									</Li>
+									<Li>
+										<Link to="/about" activeClassName="active">About</Link>
+									</Li>
+									<Li>
+										<Link to="/contacts" activeClassName="active">Contacts</Link>
+									</Li>
+								</Ul>
+							</Nav>
+						</NavContainer>
+
+						<Content>
+							<Route exact path="/" component={Home} />
+							<Route path="/portfolio" component={Portfolio} />
+							<Route path="/process" component={Process} />
+							<Route path="/about" component={About} />
+							<Route path="/contacts" component={Contacts} />
+							<Route path="/thanksform" component={ThanksForm} />
+						</Content>
+
+						<SliderContainer>
+							{
+								!this.state.isResfreshed ? (
+									<Slider onClick={this.refreshPage} style={{ left: "-148px" }}>
+										<Pager />
+									</Slider>
+								) : (
+									<Slider onClick={this.refreshPage}>
+										<Pager />
+									</Slider>
+								)
+							}
+						</SliderContainer>
+					</div>
+				</Router>
 			</Wrapper>
 		</Provider>
 	}

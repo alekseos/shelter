@@ -16,7 +16,7 @@ export const ItemActive = styled.div`
   color: white;
   cursor: pointer;
   flex: 1 0;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0 10px;
   text-align: center;
   width: 100px;
@@ -27,7 +27,7 @@ export const Item = styled.div`
   color: black;
   cursor: pointer;
   flex: 1 0;
-  padding: 10px;
+  padding: 10px 20px;
   margin: 0 10px;
   text-align: center;
   width: 100px;

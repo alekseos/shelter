@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const ProcessContainer = styled.div`
   display: flex;
   margin: 0 auto;
+
+  height: 100%;
+  -webkit-box-align: center;
+  align-items: center;
 `;
 export const ProcessSection = styled.div`
   flex: 1;

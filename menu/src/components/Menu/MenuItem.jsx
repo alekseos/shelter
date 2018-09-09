@@ -7,11 +7,12 @@ const MenuItem = ({
   onClick,
   active = null,
   readableTitle,
+  style
 }) => {
   if (active !== null) {
-    return <ItemActive onClick={() => onClick(title)}>{readableTitle}</ItemActive>
+    return <ItemActive style={style} onClick={() => onClick(title)}>{readableTitle}</ItemActive>
   } else {
-    return <Item onClick={() => onClick(title)}>{readableTitle}</Item>
+    return <Item style={style} onClick={() => onClick(title)}>{readableTitle}</Item>
   }
 }
 

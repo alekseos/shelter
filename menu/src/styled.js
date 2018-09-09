@@ -19,6 +19,7 @@ export const Li = styled.li`
 	float: right;
 	height: 100%;
 	line-height: 45px;
+	color: #232226;
 
 	&:first-child {
 		margin-right: -31px;
@@ -72,7 +73,14 @@ export const Content = styled.div`
 
 	/* @media (min-width: 1800px) and (min-height: 1000px) { */
 		margin: 0 220px;
+
 		height: 95vh;
+		/* display: flex;
+		flex-direction: column;
+		-webkit-box-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		justify-content: center; */
 	/* } */
 `;
     

@@ -41,10 +41,19 @@ class MenuBlock extends React.Component {
 
   mappingItems = () => {
     let { titles, filter } = this.props;
+    let commonStyle = {
+      padding: '39px 0px'
+    }
 
     const titleItems = titles.map( (title, key) => {
 
       let readableTitle = this.convertToReadableTitles(title);
+      let style = {
+        margin: '0px 15px',
+        fontSize: 30,
+        whiteSpace: 'nowrap',
+        width: 'inherit',
+      }
 
       if (title === filter.filter) {
         return <MenuItem
@@ -53,6 +62,7 @@ class MenuBlock extends React.Component {
           title={title}
           key={key}
           onClick={this.handleClick}
+          style={style}
         />;
       } else {
         return <MenuItem
@@ -60,11 +70,12 @@ class MenuBlock extends React.Component {
           title={title}
           key={key}
           onClick={this.handleClick}
+          style={style}
         />;
       }
     });
 
-    return <MenuContainer>{titleItems}</MenuContainer>;
+    return <MenuContainer style={commonStyle}>{titleItems}</MenuContainer>;
   }
 
   render() {

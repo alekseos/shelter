@@ -6,9 +6,10 @@ export const ThanksForm = () => {
     return <Wrapper>
         <Container>
             <VerticalAlignment>
-                <h3>
-                    Thank you for your request. We'll response you in recent time.
-                </h3>
+                <h1>
+                    Thank you for your request!
+                </h1>
+                <p>We'll response you in recent time.</p>
             </VerticalAlignment>
         </Container>
     </Wrapper>
