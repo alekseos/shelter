@@ -1,128 +1,135 @@
 import React from 'react';
-import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import bottomArrow from '../images/bottomArrow.svg';
 import topArrow from '../images/topArrow.svg';
+import { Arrow, EndPage, Hr, ImgContainer, PagerContainer, StartPage } from './styled.js';
 
 class Pager extends React.Component {
     constructor() {
         super();
+        this.state = {
+            numbers: {
+                start: "00",
+                end: "01"
+            },
+            url: {
+                start: "/",
+                end: "/portfolio"
+            },
+            isRefresh: false      
+        }
     }
 
-    decreaseHandler = () => {
-        number.start = Number(number.start) - 1;
-        number.end = Number(number.end) - 1;
+    componentDidUpdate(){
+        if (this.state.isRefresh) {
+            this.refreshPage();
+            this.setState({ isRefresh: false });
+        }
+    }
 
-        console.log("decrease");
-    };
-
-    increaseHandler = () => {
-        number.end = Number(number.start) + 1;
-        number.end = Number(number.end) + 1;
-
-        console.log("increase");
-    };
-
-    render() {
+    refreshPage = () => {
         let href = window.location.pathname;
-        let numbers = {
-            start: "",
-            end: ""
-        };
-
-        numbers.start = "00";
-        numbers.end = "01";
+        let el = true;
 
         switch (href) {
             case ("/"):
-                numbers.start = "00";
-                numbers.end = "01";
+                this.setState({
+                    numbers: {
+                        start: "00",
+                        end: "01"
+                    },
+                    url: {
+                        start: "/",
+                        end: "/portfolio"
+                    }   
+                });
                 break;
             case ("/portfolio"):
-                numbers.start = "01";
-                numbers.end = "02";
+                this.setState({
+                    numbers: {
+                        start: "01",
+                        end: "02"
+                    },
+                    url: {
+                        start: "/",
+                        end: "/process"
+                    }
+                });
                 break;
             case ("/process"):
-                numbers.start = "02";
-                numbers.end = "03";
+                this.setState({
+                    numbers: {
+                        start: "02",
+                        end: "03"
+                    },
+                    url: {
+                        start: "/portfolio",
+                        end: "/about"
+                    }
+                });
                 break;
             case ("/about"):
-                numbers.start = "03";
-                numbers.end = "04";
+                this.setState({
+                    numbers: {
+                        start: "03",
+                        end: "04"
+                    },
+                    url: {
+                        start: "/process",
+                        end: "/contacts"
+                    }
+                });
                 break;
             case ("/contacts"):
-                numbers.start = "04";
-                numbers.end = "05";
+                this.setState({
+                    numbers: {
+                        start: "04",
+                        end: "05"
+                    },
+                    url: {
+                        start: "/about",
+                        end: "/"
+                    }
+                });
                 break;
             default:
-                numbers.start = "00";
-                numbers.end = "01";
+                break;
         }
 
-        console.log(numbers);
+        this.setState({isRefresh: true});
+
+        console.log(this.state);
+    }
+
+    render() {
+        let { numbers, url } = this.state;
 
         return (
             <PagerContainer>
-                <Arrow onClick={this.decreaseHandler}>
-                    <ImgContainer style={{ margin: '21px 0 0 -60px' }}>
-                        <img src={topArrow} />
-                    </ImgContainer>
-                </Arrow>
+                <Link onClick={this.refreshPage} to={url.start} activeClassName="active">
+                    <Arrow>
+                        <ImgContainer style={{ margin: '21px 0 0 -60px' }}>
+                            <img src={topArrow} />
+                        </ImgContainer>
+                    </Arrow>
+                </Link>
 
-                <StartPage>{numbers && numbers.start}</StartPage>
+                <StartPage>{numbers.start}</StartPage>
                 <Hr />
-                <EndPage>{numbers && numbers.end}</EndPage>
+                <EndPage>{numbers.end}</EndPage>
 
-                <Arrow onClick={this.increaseHandler}>
-                    <ImgContainer style={{ margin: '21px 0 0 500px' }}>
-                        <img src={bottomArrow} />
-                    </ImgContainer>
-                </Arrow>
+                <Link onClick={this.refreshPage} to={url.end} activeClassName="active">
+                    <Arrow>
+                        <ImgContainer style={{ margin: '21px 0 0 500px' }}>
+                            <img src={bottomArrow} />
+                        </ImgContainer>
+                    </Arrow>
+                </Link>
+                
             </PagerContainer>
         )
-    }
+    };
 }
 
 export default Pager;
-
-const Hr = styled.div`
-	border-bottom: .5px solid black;
-	margin: 0 0 0 67.4px;
-    width: 277px;
-`;
-
-const StartPage = styled.div`
-	margin: 0;
-`;
-const EndPage = styled.div`
-	margin: 0 0 0 394px;
-`;
-const Arrow = styled.div`
-	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	margin-top: -45px;
-	margin-left: -35px;
-	width: 70px;
-	height: 90px;
-
-	&:hover polyline,
-	&:focus polyline {
-		stroke-width: 3;
-	}
-
-	&:active polyline {
-  		stroke-width: 6;
-  		transition: all 100ms ease-in-out;
-	}
-
-	polyline {
-	transition: all 250ms ease-in-out;
-	}
-`;
-const PagerContainer = styled.div`
-	margin: 0 0 0 225px;
-`;
-
-const ImgContainer = styled.div`
-`;

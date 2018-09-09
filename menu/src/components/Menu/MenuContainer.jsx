@@ -1,16 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 
 import { filterAllProjects, filterApp, filterDesign, filterElements, filterLandingPage } from '../../actions/filter.js';
 import MenuItem from './MenuItem.jsx';
-
-const Wrapper = styled.section`
-  display: flex;
-  padding: 20px 0;`
-const MenuContainer = styled.div`
-  display: flex;
-  margin: 0 auto;`
+import { MenuContainer, Wrapper } from './styled.js';
 
 class MenuBlock extends React.Component {
   constructor(props) {

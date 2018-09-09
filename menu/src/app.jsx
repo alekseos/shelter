@@ -1,21 +1,21 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import { combineReducers } from 'redux';
 import * as Redux from 'redux';
-import styled from 'styled-components';
+import { combineReducers } from 'redux';
 
 import logo from '../src/images/logo.png';
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
-import { Pager } from './extentions/Pager.jsx';
+import Pager from './extentions/Pager.jsx';
 import { filter } from './reducers/filter.js';
 import { works } from './reducers/works.js';
-import { About } from './screens/about.jsx';
-import { Contacts } from './screens/contacts.jsx';
-import { Home } from './screens/home.jsx';
-import { Portfolio } from './screens/portfolio.jsx';
-import { Process } from './screens/process.jsx';
-import { ThanksForm } from './screens/thanksForm.jsx';
+import { About } from './screens/about/about.jsx';
+import { Contacts } from './screens/contacts/contacts.jsx';
+import { Home } from './screens/home/home.jsx';
+import { Portfolio } from './screens/portfolio/portfolio.jsx';
+import { Process } from './screens/process/process.jsx';
+import { ThanksForm } from './screens/thanksForm/thanksForm.jsx';
+import { Content, Li, Logo, Nav, NavContainer, Slider, SliderContainer, Ul, Wrapper } from './styled.js';
 
 const Skelet = () => (
   <Router>
@@ -83,98 +83,6 @@ class App extends React.Component {
 		</Provider>
 	}
 }
-
-const Wrapper = styled.div`
-	margin: -50px 20px 0 20px;
-
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		margin: 0;
-	/* } */
-	`;
-const Ul = styled.ul`
-	list-style-type: none;
-	text-decoration: none;`;
-const Li = styled.li`
-	display: inline-block;
-	margin-right: 20px;
-	float: right;
-	height: 100%;
-	line-height: 45px;
-
-	&:first-child {
-		margin-right: -31px;
-	}
-	
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		margin-right: 40px;
-	/* } */
-	
-	`;
-const NavContainer = styled.div`
-	line-height: 0;
-`;
-const Nav = styled.nav`
-	height: 45px;
-	padding-right: 26vh;
-	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(-90deg) translateX(-100%);
-	box-sizing: border-box;
-
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-	
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		font-size: 30px;
-		margin-top: 23px;
-		position: absolute;
-		left: 106px;
-		padding-right: 0;
-		width: 94vh;
-	}
-	/* } */
-	`;
-const Logo = styled.img`
-	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(90deg) translateX(-100%);
-	width: 79px;
-	height: 73px;
-	content: 'logo here :)';
-	margin: 26px 0px 0px 96px;
-`;
-const Content = styled.div`
-	margin: 0 80px;
-	height: 95vh;
-
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		margin: 0 220px;
-		height: 95vh;
-	/* } */
-	`;
-const SliderContainer = styled.div`
-	line-height: 0;
-	position: absolute;
-    right: 0;
-`;
-
-const Slider = styled.nav`
-	height: 45px;
-	padding-right: 26vh;
-	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(-270deg) translateX(-100%);
-	box-sizing: border-box;
-
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		position: absolute;
-		padding-right: 0;
-		width: 94vh;
-		height: 10px;
-		left: -168px;
-    	font-size: 25px;
-	}
-	/* } */
-`;
 
 const appReducers = combineReducers({
 	works, filter

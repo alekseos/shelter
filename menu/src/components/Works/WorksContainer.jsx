@@ -1,16 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import styled from 'styled-components';
 
+import { WorksContainer, WrapperContainer } from './styled.js';
 import WorksItem from './WorksItem.jsx';
-
-const Wrapper = styled.section`
-  display: flex;
-  padding: 20px 0;`
-const WorksContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;`
 
 class WorksBlock extends React.Component {
   constructor(props) {
@@ -37,9 +29,9 @@ class WorksBlock extends React.Component {
   }
 
   render() {
-    return <Wrapper>
+    return <WrapperContainer>
       {this.mappingItems()}
-    </Wrapper>
+    </WrapperContainer>
   }
 }
 
