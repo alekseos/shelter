@@ -12,11 +12,9 @@ class WorksBlock extends React.Component {
   mappingItems = () => {
     let { works, filter }  = this.props;
 
-    console.log('filter_cloning:', filter, filter.filter);
-
     const titleItems = works
       .filter(post => post.tags.includes(filter.filter))
-        .map( (work, key) => {
+        .map((work, key) => {
 
       return <WorksItem
         image={work.image}

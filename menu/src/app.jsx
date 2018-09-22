@@ -1,13 +1,14 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-import * as Redux from 'redux';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { combineReducers } from 'redux';
+import * as Redux from 'redux';
 
-import logo from '../src/images/logo.png';
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
-import Pager from './extentions/Pager.jsx';
+import Navigator from './extentions/Navigator/Navigator.jsx';
+import Pager from './extentions/Pager/Pager.jsx';
 import { filter } from './reducers/filter.js';
+import { page } from './reducers/page.js';
 import { works } from './reducers/works.js';
 import { About } from './screens/about/about.jsx';
 import { Contacts } from './screens/contacts/contacts.jsx';
@@ -15,35 +16,56 @@ import { Home } from './screens/home/home.jsx';
 import { Portfolio } from './screens/portfolio/portfolio.jsx';
 import { Process } from './screens/process/process.jsx';
 import { ThanksForm } from './screens/thanksForm/thanksForm.jsx';
-import { Content, Li, Logo, Nav, NavContainer, Slider, SliderContainer, Ul, Wrapper } from './styled.js';
+import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled.js';
 
 class App extends React.Component {
-	constructor () {
-		super ();
+	constructor(props) {
+		super(props);
 
 		this.state = {
-			isResfreshed: true
-		}
+			isResfreshed: true,
+			hasVScroll: false
+		};
 
 		this.store = Redux.createStore(
-	    appReducers,
-	    {
-			works: WorksPackDemo,
-			filter: 'allProject',
-	    }
-	  );
+			appReducers,
+			{
+				works: WorksPackDemo,
+				filter: 'allProject',
+				page: {
+					numbers: {
+						start: "00",
+						end: "01"
+					},
+					url: {
+						start: "/",
+						end: "/portfolio"
+					},
+				}
+			},
+			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+		);
 	}
 
+	componentDidMount() {
+		this.checkingScrollBar();
+	} 
+
 	componentDidUpdate() {
-		if (this.state.isRefresh) {
+		if (this.state.isRefreshed) {
 			this.checkingScrollBar();
-			this.setState({ isRefresh: false });
+			this.setState({ isRefreshed: false });
 		}
 	} 
 
 	checkingScrollBar = () => {
 		let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
-		console.log(hasVScroll);
+
+		if (hasVScroll) {
+			this.setState({ hasVScroll: true })
+		} else {
+			this.setState({ hasVScroll: false })
+		}
 	}
 
 	refreshPage = () => {
@@ -56,27 +78,7 @@ class App extends React.Component {
 				<Router>
 					<div>
 						<NavContainer>
-							<Nav>
-								<Ul>
-									<Li>
-										<Link exact to="/" activeClassName="active">
-											<Logo src={logo} />
-										</Link>
-									</Li>
-									<Li>
-										<Link to="/portfolio" activeClassName="active">Portfolio</Link>
-									</Li>
-									<Li>
-										<Link to="/process" activeClassName="active">Process</Link>
-									</Li>
-									<Li>
-										<Link to="/about" activeClassName="active">About</Link>
-									</Li>
-									<Li>
-										<Link to="/contacts" activeClassName="active">Contacts</Link>
-									</Li>
-								</Ul>
-							</Nav>
+							<Navigator />
 						</NavContainer>
 
 						<Content>
@@ -90,8 +92,8 @@ class App extends React.Component {
 
 						<SliderContainer>
 							{
-								!this.state.isResfreshed ? (
-									<Slider onClick={this.refreshPage} style={{ left: "-148px" }}>
+								this.state.hasVScroll ? (
+									<Slider onClick={this.refreshPage} style={{ left: "-151px" }}>
 										<Pager />
 									</Slider>
 								) : (
@@ -109,7 +111,7 @@ class App extends React.Component {
 }
 
 const appReducers = combineReducers({
-	works, filter
+	works, filter, page
 });
 
 export default App;
