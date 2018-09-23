@@ -22,8 +22,8 @@ export const Arrow = styled.div`
 	top: 50%;
 	margin-top: -45px;
 	margin-left: -35px;
-	width: 70px;
-	height: 90px;
+	/* width: 70px;
+	height: 90px; */
 
 	&:hover polyline,
 	&:focus polyline {

@@ -37,7 +37,8 @@ export const H1 = styled.h1`
     font-size: 112px;
     letter-spacing: 2.7px;
   /* } */
-  `;
+`;
+
 export const Description = styled.div`
 	font-family: roboto_slabregular;
   width: 400px;
@@ -50,22 +51,24 @@ export const Description = styled.div`
     padding: 10px 0 0 4px;
     letter-spacing: 0.2px;
   /* } */
-  `;
+`;
+
 export const ImageContainer = styled.div`
   flex: 1;
   justify-content: center;
   align-items: center;
-  display: flex;`;
-export const Image = styled.img`
-  background: url('../src/images/hi.png');
-  height: 480px;
-  width: 494px;
-  content: 'Hi, visitors! Here should be an img :)';
+  display: flex;
+`;
 
-    	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-      background-size: 100% 100%;
-      margin: 115px 0px 0px -274px;
-      height: 690px;
-      width: 711px;
-	  /* } */
-  `;
+export const Image = styled.img`
+  @media (min-width: 1860px) and (min-height: 800px) {
+    background: url('../src/images/hi.png');
+    content: 'Hi, visitors! Here should be an img :)';
+    height: 480px;
+    width: 494px;
+    background-size: 100% 100%;
+    margin: 115px 0px 0px -274px;
+    height: 690px;
+    width: 711px;
+  }
+`;
