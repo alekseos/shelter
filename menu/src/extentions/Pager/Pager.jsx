@@ -12,6 +12,10 @@ class PagerBlock extends React.Component {
         super();
     }
 
+    componentDidMount = () => {
+        this.checkingUrl();
+    }
+
     checkingUrl = () => {
         let { dispatchPageType } = this.props;
         let href = window.location.pathname;
@@ -75,19 +79,6 @@ class PagerBlock extends React.Component {
             :
             <div></div>
         )
-    }
-}
-
-PagerBlock.defaultProps = {
-    page: {
-        numbers: {
-            start: "00",
-            end: "01"
-        },
-        url: {
-            start: "/",
-            end: "/portfolio"
-        },
     }
 }
 

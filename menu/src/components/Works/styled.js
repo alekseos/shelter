@@ -13,7 +13,7 @@ export const WorksContainer = styled.div`
 
 export const Wrapper = styled.div`
   position: relative;
-  margin: 0 10px 20px 10px;
+  margin: 0 10px 75px 10px;
 `;
 
 export const Item = styled.div`

@@ -3,13 +3,17 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   display: flex;
   height: 100%;
-  width: 100%;`;
+  width: 100%;
+`;
+
 export const OfferContainer = styled.div`
   flex: 1;
   position: relative;
   justify-content: center;
   align-items: center;
-  display: flex;`;
+  display: flex;
+`;
+
 export const Offer = styled.div`
   position: absolute;
   left: 100px;
@@ -20,7 +24,8 @@ export const Offer = styled.div`
     margin: -22px 0px 0px 21px;
     padding: 67px 0 0 0;
   /* } */
-  `;
+`;
+
 export const H1 = styled.h1`
 	line-height: 40px;
   font-size: 85px;

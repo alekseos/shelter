@@ -10,8 +10,10 @@ export const TextAreaItem = styled.textarea`
   color: rgba(35, 34, 38, .5);
   display: block;
   height: 150px;
-  font-size: 16px;
+  font-size: 19px;
   margin: 0 auto;
   padding: 20px;
   width: 380px;
+  font-family: 'latoregular';
+  resize: none;
 `;

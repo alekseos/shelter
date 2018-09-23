@@ -10,15 +10,17 @@ export const Contacts = () => {
 	return <ContactsContainer>
 		<LeftPart>
 			<Input
-				placeholder={'Name'}
-			/>
-			<Input
-				placeholder={'Surname'}
+				placeholder={'Name Surname'}
 			/>
 			<Input
 				placeholder={'Phone'}
 			/>
-			<TextArea />
+			<Input
+				placeholder={'Email'}
+			/>
+			<TextArea 
+				placeholder={'Your text here'}
+			/>
 
 			<Link exact to="/thanksForm" activeClassName="active">
 				<Button
