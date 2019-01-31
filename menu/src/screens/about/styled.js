@@ -11,6 +11,8 @@ export const Image = styled.img`
 	height: 900px;      
 	content: 'Hi, visitors! Here should be an img :)';
 	background-size: 100% 100%;
+	text-indent: 100vw;
+	border: 'none';
 `;
 
 export const ImageContainer = styled.div`

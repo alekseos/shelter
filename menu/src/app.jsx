@@ -59,6 +59,8 @@ class App extends React.Component {
 	} 
 
 	checkingScrollBar = () => {
+		console.log('here');
+
 		let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
 
 		if (hasVScroll) {
@@ -78,7 +80,7 @@ class App extends React.Component {
 				<Router>
 					<div>
 						<NavContainer>
-							<Navigator />
+							<Navigator handleClick={this.refreshPage}/>
 						</NavContainer>
 
 						<Content>

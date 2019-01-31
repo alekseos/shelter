@@ -36,15 +36,15 @@ export const Nav = styled.nav`
 		color: inherit;
 	}
 	
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		font-size: 30px;
-		margin-top: 23px;
-		position: absolute;
-		left: 106px;
-		padding-right: 0;
-		width: 94vh;
-	}
-	/* } */
+	font-size: 30px;
+	margin-top: 23px;
+	position: absolute;
+	left: 5.5vw;
+	padding-right: 0;
+	width: 94vh;
+
+	/* @media (max-width: 700px) and (min-height: 1000px) { */
+
 `;
 
 export const Logo = styled.img`

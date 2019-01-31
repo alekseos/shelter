@@ -70,5 +70,6 @@ export const Image = styled.img`
     margin: 115px 0px 0px -274px;
     height: 690px;
     width: 711px;
+    text-indent: 100vw;
   }
 `;
