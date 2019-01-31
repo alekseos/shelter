@@ -5,7 +5,7 @@ export const AboutContainer = styled.div`
 	position: relative;
 `;
 
-export const Image = styled.img`
+export const Image = styled.div`
 	background: url('../../src/images/team.png');
 	width: 1350px;
 	height: 900px;      

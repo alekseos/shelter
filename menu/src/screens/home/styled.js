@@ -60,16 +60,14 @@ export const ImageContainer = styled.div`
   display: flex;
 `;
 
-export const Image = styled.img`
+export const Image = styled.div`
   @media (min-width: 1860px) and (min-height: 800px) {
-    background: url('../src/images/hi.png');
+    background: url('../src/images/ann_and.jpg') 105% 55% / 73% 80% no-repeat;
     content: 'Hi, visitors! Here should be an img :)';
     height: 480px;
     width: 494px;
-    background-size: 100% 100%;
-    margin: 115px 0px 0px -274px;
-    height: 690px;
+    margin: 0 0 0 -274px;
+    height: 100%;
     width: 711px;
-    text-indent: 100vw;
   }
 `;
