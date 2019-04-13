@@ -49,6 +49,5 @@ export const Slider = styled.nav`
 		height: 10px;
 		left: -168px;
     	font-size: 25px;
-	}
 	/* } */
 `;
