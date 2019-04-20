@@ -1,8 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { combineReducers } from 'redux';
 import * as Redux from 'redux';
+import { combineReducers } from 'redux';
 
 import WorksPackDemo from './data/WorksPack/WorksPack.jsx';
 import Navigator from './extentions/Navigator/Navigator.jsx';
@@ -43,7 +43,7 @@ class App extends React.Component {
 					},
 				}
 			},
-			(window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
+			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 		);
 	}
 
