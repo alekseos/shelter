@@ -1,15 +1,15 @@
 var path = require('path');
-var htmlWebpackPlugin = require('html-webpack-plugin');
+var webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = (env) => {
-  console.log(env);
   return {
-    mode: env.mode,
+    mode: env && env.mode ? env.mode : 'development',
     entry: './src/index.tsx',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      // path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
-      publicPath: '/dist/'
+      publicPath: ''
     },
     module: {
       rules: [
@@ -37,9 +37,10 @@ module.exports = (env) => {
         },
       ]
     },
-    // plugins: [
-    //   new htmlWebpackPlugin()
-    // ],
+    plugins: [
+      new HtmlWebpackPlugin(),
+      new webpack.ProgressPlugin()
+    ],
     devServer: {
       historyApiFallback: true,
       compress: true,
