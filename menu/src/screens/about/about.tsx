@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { AboutContainer, Image, ImageContainer, Information } from './styled.js';
+import { AboutContainer, Image, ImageContainer, Information } from './styled.ts';
 
 export const About = () => {
     return <AboutContainer>

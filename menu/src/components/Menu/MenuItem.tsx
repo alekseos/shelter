@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Item, ItemActive } from './styled.js';
+import { Item, ItemActive } from './styled.ts';
 
 const MenuItem = ({
   title,

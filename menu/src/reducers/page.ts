@@ -1,4 +1,4 @@
-import { ABOUT, CONTACTS, PORTFOLIO, PROCESS, START } from '../constants/page.js';
+import { ABOUT, CONTACTS, PORTFOLIO, PROCESS, START } from '../constants/page.ts';
 
 export function page(state = {}, action) {
     switch (action.type) {

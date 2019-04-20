@@ -8,7 +8,7 @@ import {
   ProcessItemContainer,
   ProcessSection,
   ProcessTitle,
-} from './styled.js';
+} from './styled.ts';
 
 export const Process = () => {
   return <ProcessContainer>

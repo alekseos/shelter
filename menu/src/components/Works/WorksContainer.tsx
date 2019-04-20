@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { WorksContainer, WrapperContainer } from './styled.js';
-import WorksItem from './WorksItem.jsx';
+import { WorksContainer, WrapperContainer } from './styled.ts';
+import WorksItem from './WorksItem.tsx';
 
 class WorksBlock extends React.Component {
   constructor(props) {

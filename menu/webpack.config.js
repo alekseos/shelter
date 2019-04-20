@@ -1,30 +1,31 @@
 var path = require('path');
+var htmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (mode) => {
-  console.log(mode);
+module.exports = (env) => {
+  console.log(env);
   return {
-    mode,
-    entry: './src/index.jsx',
+    mode: env.mode,
+    entry: './src/index.tsx',
     output: {
-      // path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js',
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'app.bundle.js',
       publicPath: '/dist/'
     },
     module: {
       rules: [
         {
-          test: /\.(js|jsx|ts|tsx)$/,
+          test: /\.(js|jsx|ts|tsx)$/i,
           use: {
             loader: 'babel-loader',
           },
           exclude: '/node_modules/'
         },
         {
-          test: /\.json$/,
+          test: /\.tson$/i,
           loader: 'json-loader'
         },
         {
-          test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+          test: /\.(jpg|png|gif|svg|pdf|ico)$/i,
           use: [
             {
               loader: 'file-loader',
@@ -36,6 +37,9 @@ module.exports = (mode) => {
         },
       ]
     },
+    // plugins: [
+    //   new htmlWebpackPlugin()
+    // ],
     devServer: {
       historyApiFallback: true,
       compress: true,

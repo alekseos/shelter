@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Description, Image, Item, Mask, Wrapper } from './styled.js';
+import { Description, Image, Item, Mask, Wrapper } from './styled.ts';
 
 const WorksItem = ({
   title,

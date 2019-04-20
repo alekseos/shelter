@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { filterAllProjects, filterApp, filterDesign, filterElements, filterLandingPage } from '../../actions/filter.js';
-import MenuItem from './MenuItem.jsx';
-import { MenuContainer, Wrapper } from './styled.js';
+import { filterAllProjects, filterApp, filterDesign, filterElements, filterLandingPage } from '../../actions/filter.ts';
+import MenuItem from './MenuItem.tsx';
+import { MenuContainer, Wrapper } from './styled.ts';
 
 class MenuBlock extends React.Component {
   constructor(props) {

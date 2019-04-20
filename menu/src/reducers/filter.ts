@@ -1,4 +1,4 @@
-import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from '../constants/filter.js';
+import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from '../constants/filter.ts';
 
 export function filter (state = {}, action) {
   switch (action.type) {
