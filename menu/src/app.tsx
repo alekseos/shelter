@@ -17,9 +17,10 @@ import { Portfolio } from './screens/portfolio/portfolio.tsx';
 import { Process } from './screens/process/process.tsx';
 import { ThanksForm } from './screens/thanksForm/thanksForm.tsx';
 import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled.ts';
+import { AppProps, AppState } from './types.ts';
 
-class App extends React.Component {
-	constructor(props) {
+class App extends React.Component<AppProps, AppState> {
+	constructor(props: AppProps) {
 		super(props);
 
 		this.state = {
@@ -59,8 +60,6 @@ class App extends React.Component {
 	} 
 
 	checkingScrollBar = () => {
-		console.log('here');
-
 		let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
 
 		if (hasVScroll) {
@@ -85,7 +84,7 @@ class App extends React.Component {
 
 						<Content>
 							<Route exact path="/" component={Home} />
-							<Route path="/portfolio" component={Portfolio} />
+							<Route exact path="/portfolio" component={Portfolio} />
 							<Route path="/process" component={Process} />
 							<Route path="/about" component={About} />
 							<Route path="/contacts" component={Contacts} />

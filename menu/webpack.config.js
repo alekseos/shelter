@@ -1,15 +1,17 @@
-var path = require('path');
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
 
 module.exports = (env) => {
   return {
     mode: env && env.mode ? env.mode : 'development',
     entry: './src/index.tsx',
     output: {
-      // path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
-      publicPath: ''
+      publicPath: '/dist/'
     },
     module: {
       rules: [

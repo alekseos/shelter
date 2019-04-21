@@ -20,6 +20,8 @@ export const Offer = styled.div`
   font-family: latoblack;
   margin: -45px 0 0 0;
 
+  ${(props) => console.log(1, props) };
+
   /* @media (min-width: 1800px) and (min-height: 1000px) { */
     margin: -22px 0px 0px 21px;
     padding: 67px 0 0 0;
