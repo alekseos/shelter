@@ -1,8 +1,8 @@
-import React from 'react';
+import Menu from 'Components/Menu/MenuContainer';
+import Works from 'Components/Works/WorksContainer';
+import * as React from 'react';
 
-import Menu from '../../components/Menu/MenuContainer.tsx';
-import Works from '../../components/Works/WorksContainer.tsx';
-import { WorksWrapper } from './styled.ts';
+import { WorksWrapper } from './styled';
 
 export const Portfolio = () => {
 	return <div>

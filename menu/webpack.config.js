@@ -2,12 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const modeConfig = env => require(`./build-utils/webpack.${env}`)(env);
+const ROOT_DIR = path.resolve(__dirname, "");
+const SRC_DIR = `${ROOT_DIR}/src`;
 
 module.exports = (env) => {
   return {
     mode: env && env.mode ? env.mode : 'development',
-    entry: './src/index.tsx',
+    entry: `${SRC_DIR}/index.tsx`,
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
@@ -16,11 +17,8 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx|ts|tsx)$/i,
-          use: {
-            loader: 'babel-loader',
-          },
-          exclude: '/node_modules/'
+          test: /\.(js?|jsx?|ts?|tsx?)$/,
+          loader: 'babel-loader'
         },
         {
           test: /\.tson$/i,
@@ -38,6 +36,21 @@ module.exports = (env) => {
           ]
         },
       ]
+    },
+    resolve: {
+      alias: {
+        App: `${SRC_DIR}`,
+        Actions: `${SRC_DIR}/actions`,
+        Components: `${SRC_DIR}/components`,
+        Constants: `${SRC_DIR}/constants`,
+        Data: `${SRC_DIR}/data`,
+        Extentions: `${SRC_DIR}/extentions`,
+        Images: `${SRC_DIR}/images`,
+        Reducers: `${SRC_DIR}/reducers`,
+        Screens: `${SRC_DIR}/screens`
+      },
+      extensions:
+        ['.js', '.jsx', '.ts', '.tsx', '.json']
     },
     plugins: [
       new HtmlWebpackPlugin(),

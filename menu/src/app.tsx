@@ -1,23 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { combineReducers } from 'redux';
 import * as Redux from 'redux';
 
-import WorksPackDemo from './data/WorksPack/WorksPack.tsx';
-import Navigator from './extentions/Navigator/Navigator.tsx';
-import Pager from './extentions/Pager/Pager.tsx';
-import { filter } from './reducers/filter.ts';
-import { page } from './reducers/page.ts';
-import { works } from './reducers/works.ts';
-import { About } from './screens/about/about.tsx';
-import { Contacts } from './screens/contacts/contacts.tsx';
-import { Home } from './screens/home/home.tsx';
-import { Portfolio } from './screens/portfolio/portfolio.tsx';
-import { Process } from './screens/process/process.tsx';
-import { ThanksForm } from './screens/thanksForm/thanksForm.tsx';
-import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled.ts';
-import { AppProps, AppState } from './types.ts';
+import WorksPackDemo from './data/WorksPack/WorksPack';
+import Navigator from './extentions/Navigator/Navigator';
+import Pager from './extentions/Pager/Pager';
+import { filter } from './reducers/filter';
+import { page } from './reducers/page';
+import { works } from './reducers/works';
+import { About } from './screens/about/about';
+import { Contacts } from './screens/contacts/contacts';
+import { Home } from './screens/home/home';
+import { Portfolio } from './screens/portfolio/portfolio';
+import { Process } from './screens/process/process';
+import { ThanksForm } from './screens/thanksForm/thanksForm';
+import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled';
+import { AppProps, AppState } from './types';
 
 class App extends React.Component<AppProps, AppState> {
 	constructor(props: AppProps) {

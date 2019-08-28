@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-import { ItemContainer, Wrapper } from './styled.ts';
+import { ItemContainer, Wrapper } from './styled';
 
 const Input = ({
   placeholder

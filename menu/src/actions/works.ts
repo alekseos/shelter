@@ -1,4 +1,4 @@
-import { WORKS } from '../constants/works.ts';
+import { WORKS } from '../constants/works';
 
 export function works(data) {
   return {

@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-import { Container, VerticalAlignment, Wrapper } from './styled.ts';
+import { Container, VerticalAlignment, Wrapper } from './styled';
 
 export const ThanksForm = () => {
     return <Wrapper>

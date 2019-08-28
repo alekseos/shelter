@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-import { ButtonContainer, WrapperContainer } from './styled.ts';
+import { ButtonContainer, WrapperContainer } from './styled';
 
 const Button = ({
     content = 'default content',

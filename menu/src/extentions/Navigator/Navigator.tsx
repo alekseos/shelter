@@ -1,10 +1,10 @@
-import React from 'react';
+import { pageAbout, pageContacts, pagePortfolio, pageProcess, pageStart } from 'Actions/page';
+import logo from 'Images/logo.png';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { pageAbout, pageContacts, pagePortfolio, pageProcess, pageStart } from '../../actions/page.ts';
-import logo from '../../images/logo.png';
-import { Li, Logo, Nav, Ul } from './styled.ts';
+import { Li, Logo, Nav, Ul } from './styled';
 
 class NavigatorBlock extends React.Component {
     constructor() {

@@ -1,6 +1,6 @@
-import React from 'react';
+import * as React from 'react';
 
-import { TextAreaItem, Wrapper } from './styled.ts';
+import { TextAreaItem, Wrapper } from './styled';
 
 const TextArea = ({
     placeholder

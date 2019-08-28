@@ -1,11 +1,11 @@
-import React from 'react';
+import { pageAbout, pageContacts, pagePortfolio, pageProcess, pageStart } from 'Actions/page';
+import bottomArrow from 'Images/bottomArrow.svg';
+import topArrow from 'Images/topArrow.svg';
+import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { pageAbout, pageContacts, pagePortfolio, pageProcess, pageStart } from '../../actions/page.ts';
-import bottomArrow from '../../images/bottomArrow.svg';
-import topArrow from '../../images/topArrow.svg';
-import { Arrow, EndPage, Hr, ImgContainer, PagerContainer, StartPage } from './styled.ts';
+import { Arrow, EndPage, Hr, ImgContainer, PagerContainer, StartPage } from './styled';
 
 class PagerBlock extends React.Component {
     constructor() {

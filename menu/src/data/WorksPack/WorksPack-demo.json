@@ -5,7 +5,7 @@
 [ {
   "id": "1",
   "title": "I'm a 1 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -14,7 +14,7 @@
 }, {
   "id": "2",
   "title": "I'm a 2 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -23,7 +23,7 @@
 }, {
   "id": "3",
   "title": "I'm a 3 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -32,7 +32,7 @@
 }, {
   "id": "4",
   "title": "I'm a 4 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -42,7 +42,7 @@
 }, {
   "id": "5",
   "title": "I'm a 5 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -51,7 +51,7 @@
 }, {
   "id": "6",
   "title": "I'm a 6 work. I started that work in a good time",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -60,7 +60,7 @@
 }, {
   "id": "7",
   "title": "I'm a 7 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -69,7 +69,7 @@
 }, {
   "id": "8",
   "title": "8 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -79,7 +79,7 @@
 }, {
   "id": "9",
   "title": "I'm a 9 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -89,7 +89,7 @@
 }, {
   "id": "10",
   "title": "I'm a 10 work. It was a good trip. I'm remeber all of that. Thank's my team!!!",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -99,7 +99,7 @@
 }, {
   "id": "11",
   "title": "I'm a 11 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -108,7 +108,7 @@
 }, {
   "id": "12",
   "title": "I'm a 12 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -119,7 +119,7 @@
 }, {
   "id": "13",
   "title": "I'm a 13 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",
@@ -128,7 +128,7 @@
 }, {
   "id": "14",
   "title": "I'm a 14 work",
-  "image": "../../app/images/default.jpg",
+  "image": "app/images/default.jpg",
   "tags":
   [
     "allProject",

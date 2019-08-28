@@ -6,7 +6,7 @@ export const AboutContainer = styled.div`
 `;
 
 export const Image = styled.div`
-	background: url('../../src/images/team.png');
+	background: url('src/images/team.png');
 	width: 1350px;
 	height: 900px;      
 	content: 'Hi, visitors! Here should be an img :)';

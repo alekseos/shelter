@@ -1,10 +1,10 @@
-import React from 'react';
+import Button from 'Components/Button/Button';
+import Input from 'Components/Input/Input';
+import TextArea from 'Components/TextArea/TextArea';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button/Button.tsx';
-import Input from '../../components/Input/Input.tsx';
-import TextArea from '../../components/TextArea/TextArea.tsx';
-import { ContactsContainer, LeftPart, RightPart } from './styled.ts';
+import { ContactsContainer, LeftPart, RightPart } from './styled';
 
 export const Contacts = () => {
 	return <ContactsContainer>

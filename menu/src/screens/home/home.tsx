@@ -1,8 +1,8 @@
-import React from 'react';
+import Button from 'Components/Button/Button';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/Button/Button.tsx';
-import { Description, H1, Image, ImageContainer, Offer, OfferContainer, Wrapper } from './styled.ts';
+import { Description, H1, Image, ImageContainer, Offer, OfferContainer, Wrapper } from './styled';
 
 export const Home = () => {
 	return <Wrapper>

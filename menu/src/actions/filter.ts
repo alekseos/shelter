@@ -1,4 +1,4 @@
-import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from '../constants/filter.ts';
+import { ALL_PROJECTS, APP, DESIGN, ELEMENTS, LANDING_PAGE } from 'Constants/filter';
 
 export function filterAllProjects() {
   return {

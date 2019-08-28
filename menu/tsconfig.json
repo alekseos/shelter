@@ -1,0 +1,22 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es5",
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "jsx": "react",
+    "typeRoots": [
+      "Application/typings",
+       "node_modules/@types"
+    ],
+    "baseUrl": "./Application",
+    "lib": [
+      "es5", 
+      "es2015", 
+      "es2017", 
+      "dom"
+    ],
+    "moduleResolution": "node"
+  },
+  "no-var-requires": true
+}

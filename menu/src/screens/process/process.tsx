@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import {
   Count,
@@ -8,7 +8,7 @@ import {
   ProcessItemContainer,
   ProcessSection,
   ProcessTitle,
-} from './styled.ts';
+} from './styled';
 
 export const Process = () => {
   return <ProcessContainer>
@@ -49,17 +49,17 @@ const structure = [
     title: 'Plan',
     items: [
       {
-        link: '../../src/images/benefits/brief.svg',
+        link: 'src/images/benefits/brief.svg',
         alt: 'Kiwi standing on oval',
         description: 'Creating breaf'
       },
       {
-        link: '../../src/images/benefits/$.svg',
+        link: 'src/images/benefits/$.svg',
         alt: 'Kiwi standing on oval',
         description: 'Prepaying 50% of price'
       },
       {
-        link: '../../src/images/benefits/zoom.svg',
+        link: 'src/images/benefits/zoom.svg',
         alt: 'Kiwi standing on oval',
         description: 'Research MoodBoard'
       }
@@ -70,17 +70,17 @@ const structure = [
     title: 'Conception',
     items: [
       {
-        link: '../../src/images/benefits/doc.svg',
+        link: 'src/images/benefits/doc.svg',
         alt: 'Kiwi standing on oval',
         description: 'Designing prototype'
       },
       {
-        link: '../../src/images/benefits/chat.svg',
+        link: 'src/images/benefits/chat.svg',
         alt: 'Kiwi standing on oval',
         description: 'Presentation Feedback'
       },
       {
-        link: '../../src/images/benefits/scissors.svg',
+        link: 'src/images/benefits/scissors.svg',
         alt: 'Kiwi standing on oval',
         description: 'Correction'
       }
@@ -91,17 +91,17 @@ const structure = [
     title: 'Launch',
     items: [
       {
-        link: '../../src/images/benefits/des.svg',
+        link: 'src/images/benefits/des.svg',
         alt: 'Kiwi standing on oval',
         description: 'Final preview'
       },
       {
-        link: '../../src/images/benefits/rupor.svg',
+        link: 'src/images/benefits/rupor.svg',
         alt: 'Kiwi standing on oval',
         description: 'Development'
       },
       {
-        link: '../../src/images/benefits/dev.svg',
+        link: 'src/images/benefits/dev.svg',
         alt: 'Kiwi standing on oval',
         description: 'Promotion'
       }

@@ -1,4 +1,4 @@
-import { ABOUT, CONTACTS, PORTFOLIO, PROCESS, START } from '../constants/page.ts';
+import { ABOUT, CONTACTS, PORTFOLIO, PROCESS, START } from '../constants/page';
 
 export function pageStart() {
     return {
