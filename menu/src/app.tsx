@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { combineReducers } from 'redux';
 import * as Redux from 'redux';
+import { combineReducers } from 'redux';
 
 import WorksPackDemo from './data/WorksPack/WorksPack';
 import Navigator from './extentions/Navigator/Navigator';

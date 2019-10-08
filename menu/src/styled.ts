@@ -39,7 +39,7 @@ export const Slider = styled.nav`
 	height: 45px;
 	padding-right: 26vh;
 	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(-270deg) translateX(-100%);
+  -webkit-transform:rotate(-270deg) translateX(-100%);
 	box-sizing: border-box;
 
 	/* @media (min-width: 1800px) and (min-height: 1000px) { */

@@ -1,43 +1,23 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const ROOT_DIR = path.resolve(__dirname, "");
 const SRC_DIR = `${ROOT_DIR}/src`;
 
 module.exports = (env) => {
-  return {
+  return {    
+    context: ROOT_DIR,
     mode: env && env.mode ? env.mode : 'development',
+    devtool: 'source-map',
     entry: `${SRC_DIR}/index.tsx`,
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
-      publicPath: '/dist/'
-    },
-    module: {
-      rules: [
-        {
-          test: /\.(js?|jsx?|ts?|tsx?)$/,
-          loader: 'babel-loader'
-        },
-        {
-          test: /\.tson$/i,
-          loader: 'json-loader'
-        },
-        {
-          test: /\.(jpg|png|gif|svg|pdf|ico)$/i,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: '[path][name].[ext]'
-              },
-            },
-          ]
-        },
-      ]
+      publicPath: env && env.mode === 'production' ? '' : '/dist/'
     },
     resolve: {
+      extensions:
+        ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
         App: `${SRC_DIR}`,
         Actions: `${SRC_DIR}/actions`,
@@ -48,13 +28,47 @@ module.exports = (env) => {
         Images: `${SRC_DIR}/images`,
         Reducers: `${SRC_DIR}/reducers`,
         Screens: `${SRC_DIR}/screens`
-      },
-      extensions:
-        ['.js', '.jsx', '.ts', '.tsx', '.json']
+      }
+    },
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx|ts|tsx)?$/,
+          exclude: /(node_modules)/,
+          loader: 'ts-loader'
+        },
+        {
+          test: /\.tson$/i,
+          loader: 'json-loader'
+        },
+        {
+          test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+          use: [
+            {
+              loader: 'file-loader',
+              options: {
+                name: 'src/images/[name].[ext]'
+              },
+            },
+          ]
+        },
+        {
+          test: /\.(eot|ttf|otf|woff|woff2)$/,
+          loader: 'file-loader',
+          options: {
+            name: 'assets/fonts/[name].[ext]'
+          }
+        },
+        {
+          test: /\.css$/,
+          use: [ 'css-loader' ]
+        }
+      ]
     },
     plugins: [
-      new HtmlWebpackPlugin(),
-      new webpack.ProgressPlugin()
+      new HtmlWebpackPlugin({
+        title: 'Portfolio by Andrey Alekseev'
+      })
     ],
     devServer: {
       historyApiFallback: true,
