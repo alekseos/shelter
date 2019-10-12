@@ -6,14 +6,14 @@ const SRC_DIR = `${ROOT_DIR}/src`;
 
 module.exports = (env) => {
   return {    
-    context: ROOT_DIR,
-    mode: env && env.mode ? env.mode : 'development',
-    devtool: 'source-map',
     entry: `${SRC_DIR}/index.tsx`,
+    mode: env && env.mode ? env.mode : 'development',
+    devtool: '#source-map',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
-      publicPath: env && env.mode === 'production' ? '' : '/dist/'
+      publicPath: env && env.mode === 'production' ? '' : '/dist/',
+      sourceMapFilename: 'app.bundle.js.map'
     },
     resolve: {
       extensions:
@@ -33,24 +33,23 @@ module.exports = (env) => {
     module: {
       rules: [
         {
-          test: /\.(js|jsx|ts|tsx)?$/,
+          test: /\.(js|jsx|ts|tsx)$/,
           exclude: /(node_modules)/,
-          loader: 'ts-loader'
+          loader: 'babel-loader',
+          query: {
+            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
+          }
         },
         {
-          test: /\.tson$/i,
+          test: /\.json$/,
           loader: 'json-loader'
         },
         {
           test: /\.(jpg|png|gif|svg|pdf|ico)$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'src/images/[name].[ext]'
-              },
-            },
-          ]
+          loader: 'file-loader',
+          options: {
+            name: 'src/images/[name].[ext]'
+          }
         },
         {
           test: /\.(eot|ttf|otf|woff|woff2)$/,
@@ -61,13 +60,19 @@ module.exports = (env) => {
         },
         {
           test: /\.css$/,
-          use: [ 'css-loader' ]
+          loader: 'css-loader',
+          options: {
+            name: 'assets/styles/[name].[ext]'
+          }
         }
       ]
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Portfolio by Andrey Alekseev'
+        title: 'Portfolio by Andrey Alekseev',
+        files: {
+          "css": [ "./styles/css/main.css" ],
+        }
       })
     ],
     devServer: {

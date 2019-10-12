@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import * as Redux from 'redux';
 import { combineReducers } from 'redux';
+import * as Redux from 'redux';
 
 import WorksPackDemo from './data/WorksPack/WorksPack';
 import Navigator from './extentions/Navigator/Navigator';
@@ -22,44 +22,25 @@ import { AppProps, AppState } from './types';
 class App extends React.Component<AppProps, AppState> {
 	constructor(props: AppProps) {
 		super(props);
-
-		this.state = {
-			isResfreshed: true,
-			hasVScroll: false
-		};
-
-		this.store = Redux.createStore(
-			appReducers,
-			{
-				works: WorksPackDemo,
-				filter: 'allProject',
-				page: {
-					numbers: {
-						start: "00",
-						end: "01"
-					},
-					url: {
-						start: "/",
-						end: "/portfolio"
-					},
-				}
-			},
-			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-		);
 	}
+	
+	public state = {
+		isResfreshed: true,
+		hasVScroll: false
+	};
 
-	componentDidMount() {
+	public componentDidMount() {
 		this.checkingScrollBar();
 	} 
 
-	componentDidUpdate() {
+	public componentDidUpdate() {
 		if (this.state.isRefreshed) {
 			this.checkingScrollBar();
 			this.setState({ isRefreshed: false });
 		}
 	} 
 
-	checkingScrollBar = () => {
+	public checkingScrollBar = () => {
 		let hasVScroll = document.body.scrollHeight > document.body.clientHeight;
 
 		if (hasVScroll) {
@@ -69,12 +50,12 @@ class App extends React.Component<AppProps, AppState> {
 		}
 	}
 
-	refreshPage = () => {
+	public refreshPage = () => {
 		this.setState({ isRefreshed: true });
 	}
 
-	render() {
-		return <Provider store={this.store}>
+	public render() {
+		return <Provider store={store}>
 			<Wrapper>
 				<Router>
 					<div>
@@ -114,5 +95,24 @@ class App extends React.Component<AppProps, AppState> {
 const appReducers = combineReducers({
 	works, filter, page
 });
+
+const store = Redux.createStore(
+	appReducers,
+	{
+		works: WorksPackDemo,
+		filter: 'allProject',
+		page: {
+			numbers: {
+				start: "00",
+				end: "01"
+			},
+			url: {
+				start: "/",
+				end: "/portfolio"
+			},
+		}
+	},
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 export default App;
