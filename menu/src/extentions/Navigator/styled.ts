@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Ul = styled.ul`
 	list-style-type: none;
-    text-decoration: none;    
+	text-decoration: none;    
 `;
 
 export const Li = styled.li`
@@ -28,7 +28,7 @@ export const Nav = styled.nav`
 	height: 45px;
 	padding-right: 26vh;
 	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(-90deg) translateX(-100%);
+	-webkit-transform:rotate(-90deg) translateX(-100%);
 	box-sizing: border-box;
 
 	a {
@@ -49,7 +49,7 @@ export const Nav = styled.nav`
 
 export const Logo = styled.img`
 	-webkit-transform-origin: left center;
-    -webkit-transform:rotate(90deg) translateX(-100%);
+	-webkit-transform:rotate(90deg) translateX(-100%);
 	width: 79px;
 	height: 73px;
 	content: 'logo here :)';

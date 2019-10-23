@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
 
 const ROOT_DIR = path.resolve(__dirname, "");
 const SRC_DIR = `${ROOT_DIR}/src`;
@@ -12,7 +13,7 @@ module.exports = (env) => {
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'app.bundle.js',
-      publicPath: env && env.mode === 'production' ? '' : '/dist/',
+      publicPath: env === 'production' ? '' : '',
       sourceMapFilename: 'app.bundle.js.map'
     },
     resolve: {
@@ -45,24 +46,24 @@ module.exports = (env) => {
           loader: 'json-loader'
         },
         {
-          test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+          test: /\.(jpg|png|gif|svg|pdf|ico)$/i,
           loader: 'file-loader',
           options: {
-            name: 'src/images/[name].[ext]'
+            name: 'images/[name].[ext]'
           }
         },
         {
           test: /\.(eot|ttf|otf|woff|woff2)$/,
           loader: 'file-loader',
           options: {
-            name: 'assets/fonts/[name].[ext]'
+            name: 'fonts/[name].[ext]'
           }
         },
         {
           test: /\.css$/,
           loader: 'css-loader',
           options: {
-            name: 'assets/styles/[name].[ext]'
+            name: 'styles/[name].[ext]'
           }
         }
       ]
@@ -73,7 +74,8 @@ module.exports = (env) => {
         files: {
           "css": [ "./styles/css/main.css" ],
         }
-      })
+      }),
+      new HtmlWebpackRootPlugin()
     ],
     devServer: {
       historyApiFallback: true,

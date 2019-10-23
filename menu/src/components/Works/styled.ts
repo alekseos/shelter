@@ -43,7 +43,7 @@ export const Mask = styled.div`
    justify-content: center;
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
   height: 100%;
 `;
 

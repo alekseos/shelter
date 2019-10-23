@@ -10,17 +10,16 @@ class WorksBlock extends React.Component {
   }
 
   mappingItems = () => {
-    let { works, filter }  = this.props;
+    const { works, filter }  = this.props;
 
     const titleItems = works
       .filter(post => post.tags.includes(filter.filter))
         .map((work, key) => {
-
-      return <WorksItem
-        image={work.image}
-        title={work.title}
-        key={key}
-      />
+          return <WorksItem
+            image={work.image}
+            title={work.title}
+            key={key}
+          />
     });
 
     return <WorksContainer>{titleItems}</WorksContainer>;

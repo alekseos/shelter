@@ -21,8 +21,22 @@
       "es2017", 
       "dom"
     ],
+    "paths": {
+      "App": ["app"],
+      "Actions": ["actions"],
+      "Constants": ["constants"],
+      "Data": ["data"],
+      "Extentions": ["extentions"],
+      "Images": ["images"],
+      "Reducers": ["reducers"],
+      "Screens": ["screens"]
+    }
   },
   "include": [
     "./src/**/*"
+  ],
+  "filesGlob": [
+    "./src/**/*",
+    "./typings/index.d.ts"
   ]
 }

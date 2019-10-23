@@ -1,3 +1,4 @@
+import image from 'Images/ann_and.jpg';
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
@@ -60,14 +61,14 @@ export const ImageContainer = styled.div`
   display: flex;
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
   @media (min-width: 1860px) and (min-height: 800px) {
-    background: url('../src/images/ann_and.jpg') 105% 55% / 73% 80% no-repeat;
+    background: url(${image}) 105% 55% / 73% 80% no-repeat;
     content: 'Hi, visitors! Here should be an img :)';
     height: 480px;
-    width: 494px;
     margin: 0 0 0 -274px;
-    height: 100%;
-    width: 711px;
+    /* height: 100%; */
+    width: 494px;
+    /* width: 711px; */
   }
 `;
