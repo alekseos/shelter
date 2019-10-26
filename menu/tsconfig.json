@@ -29,7 +29,9 @@
       "Extentions": ["extentions"],
       "Images": ["images"],
       "Reducers": ["reducers"],
-      "Screens": ["screens"]
+      "Screens": ["screens"],
+      "Styles": ["styles"],
+      "Utils": ["utils"]
     }
   },
   "include": [

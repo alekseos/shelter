@@ -1,21 +1,22 @@
+import Navigator from 'Extentions/Navigator/Navigator';
+import Pager from 'Extentions/Pager/Pager';
 import * as React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { filter } from 'Reducers/filter';
+import { page } from 'Reducers/page';
+import { works } from 'Reducers/works';
 import { combineReducers } from 'redux';
 import * as Redux from 'redux';
+import { About } from 'Screens/about/about';
+import { Contacts } from 'Screens/contacts/contacts';
+import { Home } from 'Screens/home/home';
+import { Portfolio } from 'Screens/portfolio/portfolio';
+import { Process } from 'Screens/process/process';
+import { ThanksForm } from 'Screens/thanksForm/thanksForm';
+import { GlobalStyle } from 'Styles/css/main';
 
 import WorksPackDemo from './data/WorksPack/WorksPack';
-import Navigator from './extentions/Navigator/Navigator';
-import Pager from './extentions/Pager/Pager';
-import { filter } from './reducers/filter';
-import { page } from './reducers/page';
-import { works } from './reducers/works';
-import { About } from './screens/about/about';
-import { Contacts } from './screens/contacts/contacts';
-import { Home } from './screens/home/home';
-import { Portfolio } from './screens/portfolio/portfolio';
-import { Process } from './screens/process/process';
-import { ThanksForm } from './screens/thanksForm/thanksForm';
 import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled';
 import { AppProps, AppState } from './types';
 
@@ -56,6 +57,7 @@ class App extends React.Component<AppProps, AppState> {
 
 	public render() {
 		return <Provider store={store}>
+			<GlobalStyle />
 			<Wrapper>
 				<Router>
 					<div>

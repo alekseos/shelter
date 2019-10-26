@@ -28,7 +28,9 @@ module.exports = (env) => {
         Extentions: `${SRC_DIR}/extentions`,
         Images: `${SRC_DIR}/images`,
         Reducers: `${SRC_DIR}/reducers`,
-        Screens: `${SRC_DIR}/screens`
+        Screens: `${SRC_DIR}/screens`,
+        Styles: `${SRC_DIR}/styles`,
+        Utils: `${SRC_DIR}/utils`
       }
     },
     module: {
@@ -56,24 +58,18 @@ module.exports = (env) => {
           test: /\.(eot|ttf|otf|woff|woff2)$/,
           loader: 'file-loader',
           options: {
-            name: 'fonts/[name].[ext]'
+            name: '[name].[ext]'
           }
         },
         {
-          test: /\.css$/,
-          loader: 'css-loader',
-          options: {
-            name: 'styles/[name].[ext]'
-          }
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader']
         }
       ]
     },
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Portfolio by Andrey Alekseev',
-        files: {
-          "css": [ "./styles/css/main.css" ],
-        }
       }),
       new HtmlWebpackRootPlugin()
     ],

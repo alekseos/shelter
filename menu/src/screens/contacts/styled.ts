@@ -22,7 +22,7 @@ export const RightPart = styled.div`
 
 	p {
 		font-family: roboto_slabregular;
-  		color: #908f8f;
+		color: #908f8f;
 		font-size: 24px;
 		line-height: 27px;
 		padding: 10px 0 0 4px;
