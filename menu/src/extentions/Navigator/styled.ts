@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-
+import { device } from 'Utils/adaptation';
 
 export const Ul = styled.ul`
 	list-style-type: none;
@@ -7,51 +7,50 @@ export const Ul = styled.ul`
 `;
 
 export const Li = styled.li`
+	color: #232226;
 	display: inline-block;
-	margin-right: 20px;
 	float: right;
+	font-size: 1.6em;
 	height: 100%;
 	line-height: 45px;
-	color: #232226;
 
 	&:first-child {
 		margin-right: -31px;
 	}
 	
-	/* @media (min-width: 1800px) and (min-height: 1000px) { */
-		margin-right: 40px;
-	/* } */
-	
+	margin-right: 40px;
 `;
 
 export const Nav = styled.nav`
-	height: 45px;
-	padding-right: 26vh;
-	-webkit-transform-origin: left center;
-	-webkit-transform:rotate(-90deg) translateX(-100%);
 	box-sizing: border-box;
+	font-size: 1em;
+	height: 45px;
+	margin-top: 23px;
+	position: absolute;
 
 	a {
 		text-decoration: none;
 		color: inherit;
 	}
-	
-	font-size: 30px;
-	margin-top: 23px;
-	position: absolute;
-	left: 5.5vw;
-	padding-right: 0;
-	width: 94vh;
 
-	/* @media (max-width: 700px) and (min-height: 1000px) { */
-
+	@media ${device.laptop} {
+		font-size: 30px;
+		transform:rotate(-90deg) translateX(-100%);
+		transform-origin: left center;
+		left: 5.5vw;
+		padding-right: 0;
+	}
 `;
 
 export const Logo = styled.img`
-	-webkit-transform-origin: left center;
-	-webkit-transform:rotate(90deg) translateX(-100%);
 	width: 79px;
 	height: 73px;
 	content: 'logo here :)';
-	margin: 26px 0px 0px 96px;
+	margin: -10px 0 0 0;
+
+	@media ${device.laptop} {
+		transform-origin: left center;
+		transform:rotate(90deg) translateX(-100%);
+		margin: 26px 0 0 96px;
+	}
 `;

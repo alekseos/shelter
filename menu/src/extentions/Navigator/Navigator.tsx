@@ -46,7 +46,7 @@ class NavigatorBlock extends React.Component<NavigatorProps> {
     render() {
       const { handleClick } = this.props;
 
-      return <div>
+      return <>
         <Nav>
           <Ul>
             <Li onClick={this.checkingUrl}>
@@ -68,7 +68,7 @@ class NavigatorBlock extends React.Component<NavigatorProps> {
             </Li>
           </Ul> 
         </Nav>
-      </div>
+      </>
     }
 }
 

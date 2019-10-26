@@ -1,6 +1,6 @@
 import { pageAbout, pageContacts, pagePortfolio, pageProcess, pageStart } from 'Actions/page';
-import bottomArrow from 'Images/bottomArrow.svg';
-import topArrow from 'Images/topArrow.svg';
+import back from 'Images/back.svg';
+import next from 'Images/next.svg';
 import * as React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -55,7 +55,7 @@ class PagerBlock extends React.Component {
                         <Link to={page.url.start} activeClassName="active">
                             <Arrow>
                                 <ImgContainer style={{ margin: '21px 0 0 -60px' }}>
-                                    <img src={topArrow} />
+                                    <img src={back} />
                                 </ImgContainer>
                             </Arrow>
                         </Link>
@@ -69,7 +69,7 @@ class PagerBlock extends React.Component {
                         <Link to={page.url.end} activeClassName="active">
                             <Arrow>
                                 <ImgContainer style={{ margin: '21px 0 0 500px' }}>
-                                    <img src={bottomArrow} />
+                                    <img src={next} />
                                 </ImgContainer>
                             </Arrow>
                         </Link>

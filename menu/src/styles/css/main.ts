@@ -8,12 +8,18 @@ import LatoRegularWoff from 'Styles/fonts/fonts-packs/lato-regular/lato-regular-
 import RobotoSlabRegularEot from 'Styles/fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.eot';
 import RobotoSlabRegularTtf from 'Styles/fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.ttf';
 import RobotoSlabRegularWoff from 'Styles/fonts/fonts-packs/roboto-slab/robotoslab-regular-webfont.woff';
+import { device } from 'Utils/adaptation';
 
 export const GlobalStyle = createGlobalStyle`
   ${FontFaces()};
 
   body {
     font-family: 'latoregular';
+    font-size: 30px;
+
+    @media ${device.laptop} {
+      font-size: 20px;
+    }
   }
 
   .active {

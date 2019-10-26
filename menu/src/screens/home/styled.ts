@@ -6,7 +6,6 @@ export const Wrapper = styled.div`
   display: flex;
   height: 100%;
   width: 100%;
-  font-size: 30px;
 `;
 
 export const OfferContainer = styled.div`
@@ -27,19 +26,22 @@ export const Offer = styled.div`
 
 export const H1 = styled.h1`
   color: #232226;
-  font-size: 6em;
+  font-size: 4em;
   letter-spacing: .05em;
-  line-height: .3em;
+  line-height: .5em;
 `;
 
 export const Description = styled.div`
   color: #908f8f;
-  font-size: 1.4em;
+  font-size: 2.4em;
 	font-family: roboto_slabregular;
-  letter-spacing: 0.2px;
-  line-height: 27px;
+  letter-spacing: 1.2px;
+  line-height: 1.2em;
   padding: 10px 0 0 4px;
-  width: 400px;
+
+  @media ${device.laptop} {
+    width: 400px;
+  }
 `;
 
 export const ImageContainer = styled.div`

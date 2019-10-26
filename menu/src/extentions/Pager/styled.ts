@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Hr = styled.div`
 	border-bottom: .5px solid #99999a;
 	margin: 0 0 0 67.4px;
-    width: 277px;
+	width: 277px;
 `;
 
 export const StartPage = styled.div`
@@ -22,8 +22,6 @@ export const Arrow = styled.div`
 	top: 50%;
 	margin-top: -45px;
 	margin-left: -35px;
-	/* width: 70px;
-	height: 90px; */
 
 	&:hover polyline,
 	&:focus polyline {
@@ -31,12 +29,12 @@ export const Arrow = styled.div`
 	}
 
 	&:active polyline {
-  		stroke-width: 6;
-  		transition: all 100ms ease-in-out;
+		stroke-width: 6;
+		transition: all 100ms ease-in-out;
 	}
 
 	polyline {
-	transition: all 250ms ease-in-out;
+		transition: all 250ms ease-in-out;
 	}
 `;
 

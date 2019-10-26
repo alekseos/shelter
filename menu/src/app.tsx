@@ -58,9 +58,10 @@ class App extends React.Component<AppProps, AppState> {
 	public render() {
 		return <Provider store={store}>
 			<GlobalStyle />
+			
 			<Wrapper>
 				<Router>
-					<div>
+					<>
 						<NavContainer>
 							<Navigator handleClick={this.refreshPage}/>
 						</NavContainer>
@@ -87,7 +88,7 @@ class App extends React.Component<AppProps, AppState> {
 								)
 							}
 						</SliderContainer>
-					</div>
+					</>
 				</Router>
 			</Wrapper>
 		</Provider>
