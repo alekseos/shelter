@@ -2,29 +2,30 @@ import styled from 'styled-components';
 import { device } from 'Utils/adaptation';
 
 export const Wrapper = styled.div`
+	box-sizing: border-box;
+	display: flex;
+	height: 100vh;
+	height: calc(var(--vh, 1vh) * 100);
+	flex-direction: column
 	margin: 0;
-`;
-
-export const NavContainer = styled.div`
-	line-height: 0;
+	padding: 60px;
 `;
 
 export const Content = styled.div`
-	height: 95vh;
+	flex: 1;
 
 	@media ${device.laptop} {
 		margin: 0 220px;
+		height: 95vh;
 	}
-`;
-    
-export const SliderContainer = styled.div`
-	font-size: 2em;
-	line-height: 0;
-	position: absolute;
-	right: 0;
 `;
 
 export const Slider = styled.nav`
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: flex-end;
+	
   @media ${device.laptop} {
 		height: 45px;
 		padding-right: 26vh;

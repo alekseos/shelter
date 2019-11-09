@@ -39,6 +39,9 @@ class App extends React.Component<AppProps, AppState> {
 			this.checkingScrollBar();
 			this.setState({ isRefreshed: false });
 		}
+
+		let vh = window.innerHeight * 0.01;
+		document.documentElement.style.setProperty('--vh', `${vh}px`);
 	} 
 
 	public checkingScrollBar = () => {
@@ -62,9 +65,7 @@ class App extends React.Component<AppProps, AppState> {
 			<Wrapper>
 				<Router>
 					<>
-						<NavContainer>
-							<Navigator handleClick={this.refreshPage}/>
-						</NavContainer>
+						<Navigator handleClick={this.refreshPage}/>
 
 						<Content>
 							<Route exact path="/" component={Home} />
@@ -75,19 +76,17 @@ class App extends React.Component<AppProps, AppState> {
 							<Route path="/thanksform" component={ThanksForm} />
 						</Content>
 
-						<SliderContainer>
-							{
-								this.state.hasVScroll ? (
-									<Slider onClick={this.refreshPage} style={{ left: "-151px" }}>
-										<Pager />
-									</Slider>
-								) : (
-									<Slider onClick={this.refreshPage}>
-										<Pager />
-									</Slider>
-								)
-							}
-						</SliderContainer>
+						{
+							this.state.hasVScroll ? (
+								<Slider onClick={this.refreshPage} style={{ left: "-151px" }}>
+									<Pager />
+								</Slider>
+							) : (
+								<Slider onClick={this.refreshPage}>
+									<Pager />
+								</Slider>
+							)
+						}
 					</>
 				</Router>
 			</Wrapper>

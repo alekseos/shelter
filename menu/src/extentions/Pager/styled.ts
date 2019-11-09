@@ -1,27 +1,14 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
-export const Hr = styled.div`
-	border-bottom: .5px solid #99999a;
-	margin: 0 0 0 67.4px;
-	width: 277px;
-`;
-
-export const StartPage = styled.div`
-	margin: 0;
-	color: #99999a;
-`;
-
-export const EndPage = styled.div`
-	margin: 0 0 0 394px;
-	color: #99999a;
+export const PagerContainer = styled.div`
+	align-items: center;
+	display: flex;
 `;
 
 export const Arrow = styled.div`
 	cursor: pointer;
-	position: absolute;
-	top: 50%;
-	margin-top: -45px;
-	margin-left: -35px;
+	flex: 1;
 
 	&:hover polyline,
 	&:focus polyline {
@@ -38,9 +25,15 @@ export const Arrow = styled.div`
 	}
 `;
 
-export const PagerContainer = styled.div`
-	margin: 0 0 0 225px;
+export const PageNumber = styled.div`
+	color: #99999a;
+	flex: 1;
+	font-size: 2em;
+	text-align: center;
 `;
 
-export const ImgContainer = styled.div`
+export const Hr = styled.div`
+	border-bottom: .5px solid #99999a;
+	flex: 4;
+	height: .5px;
 `;

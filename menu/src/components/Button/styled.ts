@@ -7,7 +7,7 @@ export const ButtonContainer = styled.div`
   cursor: pointer;
   display: inline-block;
   font-family: roboto_slabregular;
-  font-size: 2.4em;
+  font-size: 2em;
   margin: 30px auto 0 auto;
   min-width: 100px;
   padding: .4em 1.3em .4em 1.3em;

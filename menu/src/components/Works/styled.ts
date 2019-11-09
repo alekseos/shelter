@@ -34,7 +34,6 @@ export const Mask = styled.div`
    opacity: 0;
    overflow:visible;
    position: absolute;
-   position: absolute;
    top: 0;
    transition: all 0.6s ease-in-out;
    width: 100%;

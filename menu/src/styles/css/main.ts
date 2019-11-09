@@ -15,7 +15,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'latoregular';
-    font-size: 30px;
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
 
     @media ${device.laptop} {
       font-size: 20px;

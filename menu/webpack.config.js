@@ -48,17 +48,28 @@ module.exports = (env) => {
           loader: 'json-loader'
         },
         {
-          test: /\.(jpg|png|gif|svg|pdf|ico)$/i,
+          test: /\.(jpg|png|gif|pdf|ico)$/i,
           loader: 'file-loader',
           options: {
             name: 'images/[name].[ext]'
           }
         },
         {
+          test: /\.svg$/,
+          use: [
+            {
+              loader: 'babel-loader'
+            },
+            {
+              loader: 'react-svg-loader'
+            }
+          ]
+        },
+        {
           test: /\.(eot|ttf|otf|woff|woff2)$/,
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]'
+            name: 'assets/[name].[ext]'
           }
         },
         {

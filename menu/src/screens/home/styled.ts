@@ -18,25 +18,28 @@ export const OfferContainer = styled.div`
 
 export const Offer = styled.div`
   font-family: latoblack;
-  left: 100px;
-  margin: -22px 0px 0px 21px;
-  padding: 67px 0 0 0;
-  position: absolute;
+
+  @media ${device.laptop} {
+    padding: 67px 0 0 0;
+    position: absolute;
+    left: 100px;
+    margin: -22px 0px 0px 21px;
+  }
 `;
 
 export const H1 = styled.h1`
   color: #232226;
-  font-size: 4em;
-  letter-spacing: .05em;
-  line-height: .5em;
+  font-size: 4.5em;
+  letter-spacing: .02em;
+  line-height: .45em;
 `;
 
 export const Description = styled.div`
   color: #908f8f;
-  font-size: 2.4em;
+  font-size: 1.8em;
 	font-family: roboto_slabregular;
   letter-spacing: 1.2px;
-  line-height: 1.2em;
+  line-height: 1.3em;
   padding: 10px 0 0 4px;
 
   @media ${device.laptop} {
@@ -45,10 +48,14 @@ export const Description = styled.div`
 `;
 
 export const ImageContainer = styled.div`
-  align-items: center;
-  display: flex;
-  flex: 1;
-  justify-content: center;
+  display: none;
+
+  @media ${device.laptop} {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+  }
 `;
 
 export const Image = styled.div`  

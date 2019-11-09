@@ -10,10 +10,9 @@ export const Image = styled.div`
 	background: url(${image});
 	background-size: 100% 100%;
 	border: 'none';
-	content: 'Hi, visitors! Here should be an img :)';
-	height: 900px;      
+	height: 50vh;      
 	text-indent: 100vw;
-	width: 1350px;
+	background-size: cover;
 `;
 
 export const ImageContainer = styled.div`
@@ -25,6 +24,7 @@ export const Information = styled.div`
 	bottom: 0;
 	font-size: 17px;
 	font-weight: 500;
+	flex: 1;
 	letter-spacing: 0.2px;
 	line-height: 28px;
 	padding: 10px 30px;
