@@ -36,7 +36,7 @@ export const Process = () => {
                 return (
                   <ProcessItemContainer>
                     <ProcessItem>
-                      <img src={arrayItem.link} alt={arrayItem.alt} />
+                      <[arrayItem.link] />
                       <ProcessDescription>{arrayItem.description}</ProcessDescription>
                     </ProcessItem>
                   </ProcessItemContainer>

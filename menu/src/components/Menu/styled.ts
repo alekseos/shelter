@@ -3,11 +3,13 @@ import styled from 'styled-components';
 export const Wrapper = styled.section`
   display: flex;
   padding: 20px 0;
+  flex-wrap: wrap;
 `;
 
 export const MenuContainer = styled.div`
   display: flex;
   margin: 0 auto;
+  flex-wrap: wrap;
 `;
 
 export const ItemActive = styled.div`

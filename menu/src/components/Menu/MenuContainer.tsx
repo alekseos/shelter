@@ -19,21 +19,26 @@ class MenuBlock extends React.Component {
   }
 
   convertToReadableTitles = (title) => {
-    let readableTitle = '';
+    let readableTitle: string;
 
     switch (title) {
       case 'allProject':
-        return readableTitle = 'All projects';
+        readableTitle = 'All projects';
+        break;
       case 'landingPage':
-        return readableTitle = 'Landing pages';
+        readableTitle = 'Landing pages';
+        break;
       case 'elements':
-        return readableTitle = 'Elements';
+        readableTitle = 'Elements';
+        break;
       case 'app':
-        return readableTitle = 'Apps';
+        readableTitle = 'Apps';
+        break;
       case 'design':
-        return readableTitle = 'Design';
+        readableTitle = 'Design';
+        break;
       default:
-        return readableTitle;
+        readableTitle = '';
     }
 
     return readableTitle;
@@ -41,16 +46,12 @@ class MenuBlock extends React.Component {
 
   mappingItems = () => {
     let { titles, filter } = this.props;
-    let commonStyle = {
-      padding: '39px 0px'
-    }
 
-    const titleItems = titles.map( (title, key) => {
-
+    const titleItems = titles.map((title, key) => {
       let readableTitle = this.convertToReadableTitles(title);
       let style = {
         margin: '0px 15px',
-        fontSize: 30,
+        fontSize: '1.6em',
         whiteSpace: 'nowrap',
         width: 'inherit',
       }
@@ -75,12 +76,12 @@ class MenuBlock extends React.Component {
       }
     });
 
-    return <MenuContainer style={commonStyle}>{titleItems}</MenuContainer>;
+    return <MenuContainer>{titleItems}</MenuContainer>;
   }
 
   render() {
     return <Wrapper>
-        {this.mappingItems()}
+      {this.mappingItems()}
     </Wrapper>
   }
 }

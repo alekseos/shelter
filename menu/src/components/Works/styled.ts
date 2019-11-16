@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
 export const WrapperContainer = styled.section`
   display: flex;
@@ -7,8 +8,13 @@ export const WrapperContainer = styled.section`
 
 export const WorksContainer = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  overflow: scroll;
+
+	@media ${device.laptop} {
+    flex-wrap: wrap;
+    overflow: scroll;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -18,7 +24,7 @@ export const Wrapper = styled.div`
 
 export const Item = styled.div`
   cursor: pointer;
-  height: 300px;
+	height: 30vh;
   overflow: hidden;
 
   &:hover .mask {

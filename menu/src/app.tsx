@@ -6,8 +6,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { filter } from 'Reducers/filter';
 import { page } from 'Reducers/page';
 import { works } from 'Reducers/works';
-import { combineReducers } from 'redux';
 import * as Redux from 'redux';
+import { combineReducers } from 'redux';
 import { About } from 'Screens/about/about';
 import { Contacts } from 'Screens/contacts/contacts';
 import { Home } from 'Screens/home/home';
@@ -17,8 +17,9 @@ import { ThanksForm } from 'Screens/thanksForm/thanksForm';
 import { GlobalStyle } from 'Styles/css/main';
 
 import WorksPackDemo from './data/WorksPack/WorksPack';
-import { Content, NavContainer, Slider, SliderContainer, Wrapper } from './styled';
+import { Content, Slider, Wrapper } from './styled';
 import { AppProps, AppState } from './types';
+
 
 class App extends React.Component<AppProps, AppState> {
 	constructor(props: AppProps) {

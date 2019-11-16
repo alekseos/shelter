@@ -9,7 +9,6 @@ export const AboutContainer = styled.div`
 export const Image = styled.div`
 	background: url(${image});
 	background-size: 100% 100%;
-	border: 'none';
 	height: 50vh;      
 	text-indent: 100vw;
 	background-size: cover;
