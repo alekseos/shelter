@@ -19,6 +19,7 @@ import {
   ProcessTitle,
 } from './styled';
 
+
 export const Process = () => {
   return <ProcessContainer>
     {
@@ -36,7 +37,7 @@ export const Process = () => {
                 return (
                   <ProcessItemContainer>
                     <ProcessItem>
-                      <[arrayItem.link] />
+                      {<arrayItem.link />}
                       <ProcessDescription>{arrayItem.description}</ProcessDescription>
                     </ProcessItem>
                   </ProcessItemContainer>
@@ -58,17 +59,17 @@ const structure = [
     title: 'Plan',
     items: [
       {
-        link: `${Brief}`,
+        link: Brief,
         alt: 'Kiwi standing on oval',
         description: 'Creating brief'
       },
       {
-        link: `${Money}`,
+        link: Money,
         alt: 'Kiwi standing on oval',
         description: 'Prepaying 50% of price'
       },
       {
-        link: `${Zoom}`,
+        link: Zoom,
         alt: 'Kiwi standing on oval',
         description: 'Research MoodBoard'
       }
@@ -79,17 +80,17 @@ const structure = [
     title: 'Conception',
     items: [
       {
-        link: `${Doc}`,
+        link: Doc,
         alt: 'Kiwi standing on oval',
         description: 'Designing prototype'
       },
       {
-        link: `${Chat}`,
+        link: Chat,
         alt: 'Kiwi standing on oval',
         description: 'Presentation Feedback'
       },
       {
-        link: `${Scissors}`,
+        link: Scissors,
         alt: 'Kiwi standing on oval',
         description: 'Correction'
       }
@@ -100,17 +101,17 @@ const structure = [
     title: 'Launch',
     items: [
       {
-        link: `${Design}`,
+        link: Design,
         alt: 'Kiwi standing on oval',
         description: 'Final preview'
       },
       {
-        link: `${Development}`,
+        link: Development,
         alt: 'Kiwi standing on oval',
         description: 'Development'
       },
       {
-        link: `${Rupor}`,
+        link: Rupor,
         alt: 'Kiwi standing on oval',
         description: 'Promotion'
       }

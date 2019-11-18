@@ -12,9 +12,9 @@ module.exports = (env) => {
     devtool: '#source-map',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'app.bundle.js',
+      filename: '[chunkhash:7].js',
       publicPath: env === 'production' ? '' : '',
-      sourceMapFilename: 'app.bundle.js.map'
+      sourceMapFilename: '[chunkhash:7].js.map'
     },
     resolve: {
       extensions:

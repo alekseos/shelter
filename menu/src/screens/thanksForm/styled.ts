@@ -25,9 +25,8 @@ export const VerticalAlignment = styled.div`
     p {
 			font-family: roboto_slabregular;
 			color: white;
-			font-size: 24px;
-			line-height: 27px;
-			padding: 10px 0 0 4px;
+			font-size: 1.6em;
+			line-height: 1.4em;
 			letter-spacing: 0.2px;
     }
 `;

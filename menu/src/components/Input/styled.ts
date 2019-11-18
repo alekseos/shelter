@@ -9,11 +9,11 @@ export const ItemContainer = styled.input`
   box-sizing: border-box;
   color: rgba(35, 34, 38, .5);
   display: block;
-  height: 50px;
-  font-size: 19px;
+  font-family: 'latoregular';
+  font-size: 1.5em;
+  height: 2.2em;
+  letter-spacing: 0px;
   margin: 0 auto;
   padding: 23px 0 35px 18px;
-  letter-spacing: 0px;
-  width: 380px;
-  font-family: 'latoregular';
+  width: 100%;
 `;

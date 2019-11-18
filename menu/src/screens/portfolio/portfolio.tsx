@@ -5,7 +5,7 @@ import * as React from 'react';
 import { WorksWrapper } from './styled';
 
 export const Portfolio = () => {
-	return <div>
+	return <>
 		<Menu
 			titles={[
 				'allProject',
@@ -14,8 +14,9 @@ export const Portfolio = () => {
 				'design'
 			]}
 		/>
+		
 		<WorksWrapper>
 			<Works />
 		</WorksWrapper>
-	</div>
+	</>
 };

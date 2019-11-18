@@ -6,13 +6,15 @@ export const Wrapper = styled.div`
 	display: flex;
 	height: 100vh;
 	height: calc(var(--vh, 1vh) * 100);
-	flex-direction: column
+	flex-direction: column;
 	margin: 0;
 	padding: 60px;
 `;
 
 export const Content = styled.div`
-	flex: 1;
+	display: flex;
+	flex: 6;
+	flex-direction: column;
 
 	@media ${device.laptop} {
 		margin: 0 220px;

@@ -8,7 +8,6 @@ export const WrapperContainer = styled.section`
 
 export const WorksContainer = styled.div`
   display: flex;
-  justify-content: space-around;
   overflow: scroll;
 
 	@media ${device.laptop} {
@@ -24,7 +23,7 @@ export const Wrapper = styled.div`
 
 export const Item = styled.div`
   cursor: pointer;
-	height: 30vh;
+	height: 50vh;
   overflow: hidden;
 
   &:hover .mask {

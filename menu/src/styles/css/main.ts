@@ -24,6 +24,10 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  h1 {
+    font-size: 2.5em;
+  }
+
   .active {
     color: blue !important;
   }

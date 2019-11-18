@@ -4,6 +4,7 @@ export const Wrapper = styled.section`
   display: flex;
   padding: 20px 0;
   flex-wrap: wrap;
+  flex: 1;
 `;
 
 export const MenuContainer = styled.div`
@@ -17,24 +18,25 @@ export const ItemActive = styled.div`
   border-radius: 32px;
   color: white;
   cursor: pointer;
-  flex: 1 0;
+  flex: 1 0 300px;
   padding: 10px 20px;
   margin: 0 10px;
   text-align: center;
-  width: 100px;
   transition: all 2s ease-in-out;
+  width: 100px;
 `;
 
 export const Item = styled.div`
+  border-radius: 32px;
   color: black;
   cursor: pointer;
-  flex: 1 0;
-  padding: 10px 20px;
+  flex: 1 0 300px;
   margin: 0 10px;
+  padding: 10px 20px;
   text-align: center;
-  width: 100px;
   transition: all .1s ease-in-out;
-  border-radius: 32px;
+  width: 100px;
+
 
   &:hover {
     background: blue;

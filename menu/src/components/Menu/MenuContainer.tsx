@@ -54,6 +54,7 @@ class MenuBlock extends React.Component {
         fontSize: '1.6em',
         whiteSpace: 'nowrap',
         width: 'inherit',
+        height: 'max-content'
       }
 
       if (title === filter.filter) {

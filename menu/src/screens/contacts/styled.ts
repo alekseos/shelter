@@ -1,20 +1,30 @@
 import styled from 'styled-components';
 
 export const ContactsContainer = styled.div`
-	height: 100%;
-	display: flex;
 	align-items: center;
-	justify-content: center;
-`;
-
-export const LeftPart = styled.div`
+	display: flex;
+	height: 100%;
 	flex-direction: column;
-	margin: 0 50px;
+	justify-content: center;
 `;
 
 export const RightPart = styled.div`
 	flex-direction: column;
 	margin: 0 50px;
+	width: 100%;
+`;
+
+export const LeftPart = styled.div`
+	flex-direction: column;
+	margin: 0 50px 50px;
+	width: 100%;
+
+	div {
+		align-items: center;
+    display: flex;
+    justify-content: space-between;
+		margin: -40px 0 0 0;
+	}
 
 	a {
 		text-decoration: none;
@@ -23,9 +33,8 @@ export const RightPart = styled.div`
 	p {
 		font-family: roboto_slabregular;
 		color: #908f8f;
-		font-size: 24px;
-		line-height: 27px;
-		padding: 10px 0 0 4px;
+		font-size: 1.6em;
+		line-height: 25px;
 		letter-spacing: 0.2px;
 	}
 `;

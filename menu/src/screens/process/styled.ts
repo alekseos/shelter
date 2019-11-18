@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 
 export const ProcessContainer = styled.div`
+  align-items: center;
   display: flex;
   margin: 0 auto;
-
   height: 100%;
-  -webkit-box-align: center;
-  align-items: center;
+  width: 100%;
 `;
 export const ProcessSection = styled.div`
   flex: 1;
@@ -21,13 +20,14 @@ export const ProcessSection = styled.div`
 `;
 export const ProcessTitle = styled.p`
   font-weight: 700;
-  font-size: 20px;
+  font-size: 1.6em;
+  line-height: 1.4em;
 `;
 export const Count = styled.span`
   background-color: blue;
   border-radius: 40px;
-  padding: 5px 10px 5px 10px;
   color: white;
+  padding: 10px 20px;
   margin: 0 10px 0 0;
 `;
 export const ProcessDescription = styled.div`
