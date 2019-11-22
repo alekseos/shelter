@@ -19,6 +19,7 @@ export const Content = styled.div`
 	@media ${device.laptop} {
 		margin: 0 220px;
 		height: 95vh;
+		transform: translate(0, -84px);
 	}
 `;
 

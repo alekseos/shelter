@@ -13,12 +13,10 @@ export const Nav = styled.nav`
 	}
 
 	@media ${device.laptop} {
-		font-size: 30px;
-		left: 5.5vw;
-		padding-right: 0;
-		transform:rotate(-90deg) translateX(-100%);
+		transform:rotate(-90deg) translateX(calc(-100% + 120px));
 		transform-origin: left center;
-		margin-top: 23px;
+		width: 100vh;
+		padding: 0 60px;
 	}
 `;
 
@@ -37,21 +35,11 @@ export const Li = styled.li`
 	font-size: 1.6em;
 	height: 100%;
 	line-height: 45px;
-
-	@media ${device.laptop} {
-		float: right;
-		margin-right: 40px;
-
-		&:first-child {
-			margin-right: -31px;
-		}
-	}
 `;
 
 export const Logo = styled.img`
 	@media ${device.laptop} {
-		transform-origin: left center;
-		transform:rotate(90deg) translateX(-100%);
-		margin: 26px 0 0 96px;
+		/* transform-origin: left center; */
+		transform:rotate(90deg);
 	}
 `;

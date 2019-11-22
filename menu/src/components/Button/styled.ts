@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
 export const ButtonContainer = styled.div`
   background-color: blue;
@@ -15,6 +16,10 @@ export const ButtonContainer = styled.div`
   text-decoration: underline;
   text-decoration-color: blue; 
   letter-spacing: 0.2px;
+
+  @media ${device.laptop} {
+    font-size: 1.2em;
+  }
 `;
 
 export const WrapperContainer = styled.section`

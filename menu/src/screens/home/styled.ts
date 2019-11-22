@@ -18,13 +18,6 @@ export const OfferContainer = styled.div`
 
 export const Offer = styled.div`
   font-family: latoblack;
-
-  @media ${device.laptop} {
-    padding: 67px 0 0 0;
-    position: absolute;
-    left: 100px;
-    margin: -22px 0px 0px 21px;
-  }
 `;
 
 export const H1 = styled.h1`
@@ -43,7 +36,8 @@ export const Description = styled.div`
   padding: 10px 0 0 4px;
 
   @media ${device.laptop} {
-    width: 400px;
+    font-size: 1.2em;
+    width: 600px;
   }
 `;
 
@@ -61,9 +55,9 @@ export const ImageContainer = styled.div`
 export const Image = styled.div`  
   @media ${device.laptop} {
     content: 'Hi, visitors! Here should be an img :)';
-    background: url(${image}) 105% 55% / 73% 80% no-repeat;
-    height: 480px;
-    margin: 0 0 0 -274px;
-    width: 494px;
+    background: url(${image});
+    background-size: cover;
+    height: 100%;
+    width: 100%;
   }
 `;
