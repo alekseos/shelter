@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
 export const ContactsContainer = styled.div`
 	align-items: center;
@@ -6,6 +7,10 @@ export const ContactsContainer = styled.div`
 	height: 100%;
 	flex-direction: column;
 	justify-content: center;
+
+	@media ${device.laptop} {
+		flex-direction: row;
+	}
 `;
 
 export const RightPart = styled.div`

@@ -27,6 +27,10 @@ export const Ul = styled.ul`
 	padding-inline-start: 0;
 	list-style-type: none;
 	text-decoration: none;
+
+	@media ${device.laptop} {
+		flex-direction: row-reverse;
+	}
 `;
 
 export const Li = styled.li`

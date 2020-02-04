@@ -19,8 +19,12 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
 
-    @media ${device.laptop} {
+    @media ${device.laptopL} {
       font-size: 20px;
+    }
+
+    @media ${device.laptop} {
+      font-size: 14px;
     }
   }
 

@@ -80,7 +80,8 @@ module.exports = (env) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Portfolio by Andrey Alekseev',
+        // title: 'Portfolio by Andrey Alekseev',
+        title: 'Shelter project',
       }),
       new HtmlWebpackRootPlugin()
     ],

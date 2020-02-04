@@ -17,9 +17,13 @@ export const Content = styled.div`
 	flex-direction: column;
 
 	@media ${device.laptop} {
-		margin: 0 220px;
+		margin: 0 120px;
 		height: 95vh;
 		transform: translate(0, -84px);
+	}
+
+	@media ${device.laptopL} {
+		margin: 0 220px;
 	}
 `;
 

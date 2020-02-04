@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
 export const Wrapper = styled.section`
   display: flex;
@@ -24,6 +25,10 @@ export const ItemActive = styled.div`
   text-align: center;
   transition: all 2s ease-in-out;
   width: 100px;
+
+  @media ${device.laptop} {
+    flex: 1 0;
+  }
 `;
 
 export const Item = styled.div`
@@ -43,5 +48,9 @@ export const Item = styled.div`
     border-radius: 32px;
     color: white;
     opacity: .5;
+  }
+
+  @media ${device.laptop} {
+    flex: 1 0;
   }
 `;

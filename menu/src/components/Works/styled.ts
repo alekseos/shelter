@@ -9,6 +9,7 @@ export const WrapperContainer = styled.section`
 export const WorksContainer = styled.div`
   display: flex;
   overflow: scroll;
+  justify-content: center;
 
 	@media ${device.laptop} {
     flex-wrap: wrap;
@@ -27,8 +28,12 @@ export const Item = styled.div`
   overflow: hidden;
 
   &:hover .mask {
-     opacity: 1;
-     background-color:rgba(0,0,0, 0.4);
+    opacity: 1;
+    background-color:rgba(0,0,0, 0.4);
+  }
+
+  @media ${device.laptop} {
+    height: 40vh;
   }
 `;
 
