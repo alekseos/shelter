@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'Utils/adaptation';
 
 export const ProcessContainer = styled.div`
   align-items: center;
@@ -35,11 +36,21 @@ export const ProcessDescription = styled.div`
   max-width: 100px;
   text-align: center;
 `;
-export const ProcessItem = styled.div`
-  height: 170px;
+export const ProcessItem = styled.div.attrs({
+  className: 'process__item'
+})`
   align-items: center;
   display: flex;
+  height: 170px;
   flex-direction: column;
   justify-content: flex-end;
+
+  :first-child {
+    margin: 20px 0 0 0;
+  }
+
+  @media ${device.laptop} {
+    height: 10em;
+  }
 `;
 export const ProcessItemContainer = styled.div``;

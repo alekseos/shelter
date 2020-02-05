@@ -35,9 +35,13 @@ export const Description = styled.div`
   line-height: 1.3em;
   padding: 10px 0 0 4px;
 
-  @media ${device.laptop} {
+  @media ${device.laptopL} {
     font-size: 1.2em;
     width: 600px;
+  }
+
+  @media ${device.laptop} {
+    font-size: 1.4em;
   }
 `;
 

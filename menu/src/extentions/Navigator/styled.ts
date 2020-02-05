@@ -38,7 +38,7 @@ export const Li = styled.li`
 	display: inline-block;
 	font-size: 1.6em;
 	height: 100%;
-	line-height: 45px;
+	/* line-height: 45px; */
 `;
 
 export const Logo = styled.img`

@@ -37,7 +37,9 @@ export const Process = () => {
                 return (
                   <ProcessItemContainer>
                     <ProcessItem>
-                      {<arrayItem.link />}
+                      {
+                        <arrayItem.link/>
+                      }
                       <ProcessDescription>{arrayItem.description}</ProcessDescription>
                     </ProcessItem>
                   </ProcessItemContainer>
@@ -51,7 +53,6 @@ export const Process = () => {
 
   </ProcessContainer>
 }
-
 
 const structure = [
   {

@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 88.4 99.7" style="enable-background:new 0 0 88.4 99.7;" xml:space="preserve">
-<style type="text/css">
-	.st0{opacity:0.3;}
-	.st1{opacity:0.2;fill:#232226;enable-background:new    ;}
-	.st2{fill:none;stroke:#232226;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
-</style>
-<g id="icon" class="st0">
-	<path id="Прямоугольник_2_копия" class="st1" d="M26.9,1.7h54.9c2.2,0,4,1.8,4,4v77.6c0,2.2-1.8,4-4,4H26.9
-		c-2.2,0-4-1.8-4-4V5.7C22.9,3.5,24.7,1.7,26.9,1.7z"/>
-	<path id="Прямоугольник_2" class="st2" d="M6.8,10.7h54.9c2.2,0,4,1.8,4,4v78c0,2.2-1.8,4-4,4H6.8c-2.2,0-4-1.8-4-4
-		v-78C2.8,12.5,4.6,10.7,6.8,10.7z"/>
-	<g id="Группа_1">
-		<path id="Фигура_4" class="st2" d="M15.8,35.6l37.3,0.1"/>
-		<path id="Фигура_4_копия" class="st2" d="M15.7,41.7H53"/>
-		<path id="Фигура_4_копия_2" class="st2" d="M15.7,46.6h37.4"/>
-		<path id="Фигура_4_копия_3" class="st2" d="M15.6,52.7h37.4"/>
-		<path id="Фигура_4_копия_4" class="st2" d="M14.8,67.7h18"/>
-		<path id="Фигура_4_копия_5" class="st2" d="M14.8,71.7h18"/>
+<svg 
+	version="1.1"
+	xmlns="http://www.w3.org/2000/svg" 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	x="0px" 
+	y="0px"
+	viewBox="0 0 88.4 99.7" 
+	style="enable-background:new 0 0 88.4 99.7;" 
+	xml:space="preserve"
+	stroke="#232226"
+	fill="white"
+>
+	<g>
+		<path 
+			d="M26.9,1.7h54.9c2.2,0,4,1.8,4,4v77.6c0,2.2-1.8,4-4,4H26.9
+			c-2.2,0-4-1.8-4-4V5.7C22.9,3.5,24.7,1.7,26.9,1.7z"
+		/>
+		<path 
+			d="M6.8,10.7h54.9c2.2,0,4,1.8,4,4v78c0,2.2-1.8,4-4,4H6.8c-2.2,0-4-1.8-4-4
+			v-78C2.8,12.5,4.6,10.7,6.8,10.7z"
+		/>
+		<g>
+			<path d="M15.8,35.6l37.3,0.1"/>
+			<path d="M15.7,41.7H53"/>
+			<path d="M15.7,46.6h37.4"/>
+			<path d="M15.6,52.7h37.4"/>
+			<path d="M14.8,67.7h18"/>
+			<path d="M14.8,71.7h18"/>
+		</g>
 	</g>
-</g>
 </svg>
