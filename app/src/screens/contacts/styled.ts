@@ -39,7 +39,8 @@ export const LeftPart = styled.div`
 		font-family: roboto_slabregular;
 		color: #908f8f;
 		font-size: 1.6em;
-		line-height: 25px;
+    line-height: 1.6em;
 		letter-spacing: 0.2px;
+		margin: 0 0 0 0;
 	}
 `;

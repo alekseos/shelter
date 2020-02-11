@@ -4,16 +4,15 @@ export const Wrapper = styled.section`
   padding: 20px 0;
 `;
 
-export const ItemContainer = styled.input`
-  border: 1px solid rgba(35, 34, 38, .5);
+export const TextAreaItem = styled.textarea`
   box-sizing: border-box;
   color: rgba(35, 34, 38, .5);
   display: block;
-  font-family: 'latoregular';
+  height: 150px;
   font-size: 1.5em;
-  height: 2.2em;
-  letter-spacing: 0px;
+  font-family: 'latoregular';
   margin: 0 auto;
-  padding: 23px 0 35px 18px;
+  padding: 20px;
+  resize: none;
   width: 100%;
 `;

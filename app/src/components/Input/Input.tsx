@@ -13,11 +13,12 @@ const Input = ({
 
   return (
     <Wrapper>
+      { placeholder }
       <ItemContainer
-        placeholder={placeholder}
         onChange={handleChange}
         value={value}
         type='text'
+        placeholder='Andrey'
       />
     </Wrapper>
   );

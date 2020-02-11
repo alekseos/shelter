@@ -13,15 +13,12 @@ export const Contacts = () => {
 			<p>Karavannaya, 10, Saint-Petersburg, Russia</p>
 			<h1>More information</h1>
 			
-			<div>
-				<a href="tel:+79817607250">
-					<p>+7 (981) 760-73-50</p>
-				</a>
-				/
-				<a href="mailto:veexela@gmail.com?subject=Вопрос по работе с сайтами">
-					<p>veexela@gmail.com</p>
-				</a>
-			</div>
+			<a href="tel:+79817607250">
+				<p>+7 (981) 760-73-50</p>
+			</a>
+			<a href="mailto:veexela@gmail.com?subject=Вопрос по работе с сайтами">
+				<p>veexela@gmail.com</p>
+			</a>
 		</LeftPart>
 
 		<RightPart>
