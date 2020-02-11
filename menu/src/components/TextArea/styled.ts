@@ -5,7 +5,6 @@ export const Wrapper = styled.section`
 `;
 
 export const TextAreaItem = styled.textarea`
-  border: 1px solid rgba(35, 34, 38, .5);
   box-sizing: border-box;
   color: rgba(35, 34, 38, .5);
   display: block;
